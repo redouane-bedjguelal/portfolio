@@ -57,7 +57,7 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'baseoeuvre'),
+            'database' => env('DB_DATABASE', 'ononanime'),
             'username' => env('DB_USERNAME', 'usersio'),
             'password' => env('DB_PASSWORD', 'sio'),
             'charset' => 'utf8',

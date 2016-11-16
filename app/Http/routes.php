@@ -17,6 +17,8 @@ Route::get('/', function () { return view('pageMenu'); });
 
 Route::get('/ajouterManga','MangaController@ajoutManga');
 
+Route::get('/listerAnime', 'AnimeController@getTouslesAnime');
+
 Route::get('/pageMenu', function() {
     return view('pageMenu');
 });

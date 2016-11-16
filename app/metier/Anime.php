@@ -3,6 +3,7 @@
 namespace App\metier;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class Anime extends Model
 {
@@ -23,5 +24,14 @@ class Anime extends Model
     
     public function __construct(){
         $this->numanime = 0;
+    }
+    
+    public function getAnime() {
+        // Dialogue avec la BDD
+        $lesAnime= DB::table('anime')
+                ->Select()
+                ->where()
+                ->get();
+        return $lesAnime;
     }
 }
