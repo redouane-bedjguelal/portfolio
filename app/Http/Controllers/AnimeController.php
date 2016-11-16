@@ -23,4 +23,5 @@ class AnimeController extends Controller
         // On affiche la liste de ces frais
         return view('listeFrais', compact('mesFrais', 'erreur'));
     }
+    //test
 }
