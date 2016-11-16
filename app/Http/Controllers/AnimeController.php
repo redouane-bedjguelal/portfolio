@@ -14,4 +14,5 @@ class AnimeController extends Controller
     $mesAnime = \App\metier\Anime::orderBy('nomanime', 'asc')->get();
     return view ('anime', compact('mesAnime'));
     }
+    //test
 }
