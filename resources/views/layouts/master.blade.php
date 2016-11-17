@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {!! Html::style('assets/css/bootstrap.css') !!}
-        {!! Html::style('assets/css/mangas.css') !!}
+        {!! Html::style('assets/css/style.css') !!}
         {!! Html::style('assets/css/bootstrap.css') !!}
     </head>
     <body class="body">
