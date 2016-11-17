@@ -39,7 +39,7 @@
             </form>
         </nav>
         <main>
-            <div class="container">
+            <div class="container pipi">
                 @yield('content')
             </div>
         </main>
