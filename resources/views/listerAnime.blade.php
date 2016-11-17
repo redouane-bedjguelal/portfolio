@@ -2,19 +2,18 @@
 @section('content')
 <h1>Mes anime</h1>
 <hr>
-{{ Form::close() }}
 <table>
 @foreach($mesAnime as $ligne)
 <tr>
-    <td>{{$ligne->numanime}}</td>
-    <td>{{$ligne->numstudio}}</td>
-    <td>{{$ligne->nomanime}}</td>
-    <td>{{$ligne->saisonanime}}</td>
-    <td>{{$ligne->anneeanime}}</td>
-    <td>{{$ligne->nbepisodes}}</td>
-    <td>{{$ligne->resume}}</td>
-    <td>{{$ligne->estfini}}</td>
-    <td style="text-align:center;"><a href="{{ url('/modifierAdherent') }}/{{ $ligne->id_adherent }}">
+    <td>{{$ligne->NUMANIME}}</td>
+    <td>{{$ligne->NUMSTUDIO}}</td>
+    <td>{{$ligne->NOMANIME}}</td>
+    <td>{{$ligne->SAISONANIME}}</td>
+    <td>{{$ligne->ANNEEANIME}}</td>
+    <td>{{$ligne->NBEPISODES}}</td>
+    <td>{{$ligne->RESUME}}</td>
+    <td>{{$ligne->ESTFINI}}</td>
+<td style="text-align:center;"><a href="{{ url('/modifierAdherent') }}/{{ $ligne->NUMANIME }}">
             <span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top" title="Modifier"></span>
         </a>
     </td>

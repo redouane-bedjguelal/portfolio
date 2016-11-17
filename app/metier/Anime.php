@@ -30,7 +30,6 @@ class Anime extends Model
         // Dialogue avec la BDD
         $lesAnime= DB::table('anime')
                 ->Select()
-                ->where()
                 ->get();
         return $lesAnime;
     }

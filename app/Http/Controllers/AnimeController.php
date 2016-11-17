@@ -21,7 +21,7 @@ class AnimeController extends Controller
         $unAnime = new Anime();
         $mesAnime= $unAnime->getAnime();;
         // On affiche la liste de ces frais
-        return view('listeFrais', compact('mesFrais', 'erreur'));
+        return view('listerAnime', compact('mesAnime'));
     }
     //test
 }
