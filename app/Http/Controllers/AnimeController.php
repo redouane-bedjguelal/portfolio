@@ -23,5 +23,8 @@ class AnimeController extends Controller
         // On affiche la liste de ces frais
         return view('listerAnime', compact('mesAnime'));
     }
-    //test
+    
+public function ajouterAnime(){
+    
+}
 }
