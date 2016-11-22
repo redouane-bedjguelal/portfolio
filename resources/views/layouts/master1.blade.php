@@ -51,19 +51,18 @@
         </nav>
         <!--/.Navigation-->
         <main>
-            <div class="col-md-8 col-md-offset-2">
-                <div class='wave'>
-                    <br><br>
-                    <span></span>
-                    f
-                    f
-                    f
-                    f
-                    ff
-                    
-                </div>
-                
-                @yield('content')
+            <div class="container">
+                    <div class='wave'>
+                        <br><br>
+                        <span></span>
+                        f
+                        f
+                        f
+                        f
+                        ff
+
+                    </div>
+                    @yield('content')
             </div>
         </main>
     </body>
