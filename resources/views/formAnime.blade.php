@@ -38,7 +38,7 @@
             <div class="col-md-2  col-sm-2">
                 <select class="form-control" name="auteur" required="">
                     @foreach ($lesAuteurs as $unA)
-                        <option value="{{$unA->idauteur}}"
+                    <option value="{{$unA->idauteur}}">
                            @if ( $unA->idauteur == $unLivre->idauteur )
                                 selected="selected"
                            @endif >    {{$unA->prenomauteur}} {{$unA->nomauteur}}
