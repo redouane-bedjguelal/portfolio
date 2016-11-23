@@ -12,12 +12,17 @@
 */
 
 
-
+// Redirection vers la page d'accueil
 Route::get('/', function () { return view('pageMenu'); });
 
-Route::get('/ajouterAnime','AnimeController@ajoutAnime');
+// Redirection vers le formulaire d'ajout d'un anime
+Route::get('/ajouterAnime', 'AnimeController@addAnime');
 
+// Redirection vers la liste des anime
 Route::get('/listerAnime', 'AnimeController@getTouslesAnime');
+
+// Validation d'un ajout/modification et retour à la liste des anime
+Route::get('/validerAnime', 'AnimeController@validateAnime');
 
 Route::get('/pageMenu', function() {
     return view('pageMenu');

@@ -22,10 +22,12 @@ class Anime extends Model
         'estfini'
     ];
     
+    // Constructeur d'anime
     public function __construct(){
         $this->numanime = 0;
     }
     
+    // Fonction récupérant tous les anime dans la base
     public function getAnime() {
         // Dialogue avec la BDD
         $lesAnime= DB::table('anime')
