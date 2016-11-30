@@ -46,12 +46,10 @@
             <div class="full-bg-img">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12" style="background-color: transparent; margin-top: 20%;">
-                            
-                        </div>
+                        <div class="col-lg-12" style="background-color: transparent; margin-top: 20%;"></div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-12" style="background-color: green; margin-bottom: 5%; height: 50px;">
+                        <div class="col-lg-12" style="background-color: green; margin-bottom: 5%; height: 100px;">
                         </div>
                     </div>
                     <div class="row">
@@ -92,6 +90,9 @@
                         </div>
                         <!--/Second column-->
 
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12" style="background-color: transparent; margin-top: 140%;"></div>
                     </div>
                 </div>
             </div>
