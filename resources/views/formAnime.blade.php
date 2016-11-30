@@ -55,6 +55,7 @@
 
                     <div class="col-md-3 col-sm-3">
                         <select class="form-control" name="genre1" required="">
+                            <option value="0"></option>
                             @foreach ($lesGenres as $unGenre)
                             <option value="{{$unGenre->NUMGENRE}}">{{$unGenre->LIBELLEGENRE}}</option>
                                 @endforeach
@@ -63,6 +64,7 @@
 
                     <div class="col-md-3 col-sm-3">
                         <select class="form-control" name="genre2">
+                            <option value="0"></option>
                             @foreach ($lesGenres as $unGenre)
                             <option value="{{$unGenre->NUMGENRE}}">{{$unGenre->LIBELLEGENRE}}</option>
                                 @endforeach
@@ -71,6 +73,7 @@
 
                     <div class="col-md-3 col-sm-3">
                         <select class="form-control" name="genre3">
+                            <option value="0"></option>
                             @foreach ($lesGenres as $unGenre)
                             <option value="{{$unGenre->NUMGENRE}}">{{$unGenre->LIBELLEGENRE}}</option>
                                 @endforeach

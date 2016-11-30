@@ -22,7 +22,7 @@ Route::get('/ajouterAnime', 'AnimeController@addAnime');
 Route::get('/listerAnime', 'AnimeController@getTouslesAnime');
 
 // Validation d'un ajout/modification et retour à la liste des anime
-Route::get('/validerAnime', 'AnimeController@validateAnime');
+Route::post('/validerAnime', 'AnimeController@validateAnime');
 
 Route::get('/pageMenu', function() {
     return view('pageMenu');

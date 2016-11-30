@@ -35,4 +35,35 @@ class Anime extends Model
                 ->get();
         return $lesAnime;
     }
+    
+    // Fonction récupérant l'ID d'un anime via son nom
+    public function getIdAnimeNom($nomanime){
+        // Dialogue avec la BDD
+        $idAnime = DB::table('anime')
+                ->where('NOMANIME', $nomanime)
+                ->value('NUMANIME');
+        return $idAnime;
+    }
+    
+    public function getAnimeById($idAnime){
+        // Dialogue avec la BDD
+        $unAnime = DB::table('anime')
+                ->where('NUMANIME', $idAnime)
+                ->first();
+        return $unAnime;
+    }
+    
+    // Fonction d'ajout d'un anime dans la base
+    public function addAnime($nomAnime, $annee, $saison, $nbep, $fini, $studio, $resume){
+        // Dialogue avec la BDD
+        DB::table('anime')
+                ->insert(['NOMANIME' => $nomAnime, 'NUMSTUDIO' => $studio, 'SAISONANIME' => $saison, 'ANNEEANIME' => $annee, 'NBEPISODES' => $nbep, 'RESUME' => $resume, 'ESTFINI' => $fini]);
+    }
+    
+    public function editAnime($idAnime, $studio, $nomAnime, $annee, $saison, $nbep, $fini, $resume){
+        // Dialogue avec la BDD
+        DB::table('anime')
+                ->where('NUMANIME', $idAnime)
+                ->update(['NOMANIME' => $nomAnime, 'NUMSTUDIO' => $studio, 'SAISONANIME' => $saison, 'ANNEEANIME' => $annee, 'NBEPISODES' => $nbep, 'RESUME' => $resume, 'ESTFINI' => $fini]);
+    }
 }
