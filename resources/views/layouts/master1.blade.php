@@ -7,10 +7,12 @@
         <title>ononani.me</title>
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
         {!! Html::style('assets/css/bootstrap.css') !!}
         {!! Html::style('assets/css/bootstrap.min.css') !!}
         {!! Html::style('assets/css/mdb.min.css') !!}
         {!! Html::style('assets/css/style.css') !!}
+        <!-- SCRIPTS -->
         {!! Html::script('assets/js/jquery-3.1.1.min.js') !!}
         {!! Html::script('assets/js/tether.min.js') !!}
         {!! Html::script('assets/js/bootstrap.min.js') !!}
@@ -53,7 +55,8 @@
                         <div class="col-lg-12" style="background-color: transparent; margin-top: 20%;"></div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-12" style="background-color: green; margin-bottom: 5%; height: 100px;">
+                        <div class="col-lg-12">
+                            <img src="http://i.imgur.com/yXHWJ5w.png" id="banniere">
                         </div>
                     </div>
                     <div class="row">
@@ -102,22 +105,5 @@
             </div>
         </div>
         <!--/.Mask-->
-
-        <!-- SCRIPTS -->
-
-        <!-- JQuery -->
-        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="js/tether.min.js"></script>
-
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="js/mdb.min.js"></script>
-
-        <script src="http://maps.google.com/maps/api/js"></script>
-
     </body>
 </html>
