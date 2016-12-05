@@ -11,6 +11,10 @@
         {!! Html::style('assets/css/bootstrap.min.css') !!}
         {!! Html::style('assets/css/mdb.min.css') !!}
         {!! Html::style('assets/css/style.css') !!}
+        {!! Html::script('assets/js/jquery-3.1.1.min.js') !!}
+        {!! Html::script('assets/js/tether.min.js') !!}
+        {!! Html::script('assets/js/bootstrap.min.js') !!}
+        {!! Html::script('assets/js/mdb.min.js') !!}
     </head>
     <body id="home">
         <!--Navbar-->
