@@ -36,7 +36,7 @@
                     <!--Links-->
                     <ul class="nav navbar-nav" style="float: right;">
                         <li class="nav-item">
-                            <a class="nav-link" href="LOGIN">Sign in</a>
+                            <a class="nav-link" href="LOGIN" data-toggle="modal" data-target="#myModal">Sign in</a>
                         </li>
                     </ul>
                 </div>
@@ -88,7 +88,7 @@
 
                                     <div class="text-xs-center">
                                         <button class="btn btn-primary btn-dark-green btn-lg">Sign up</button>
-                                        <button class="btn btn-pink btn-lg">Sign in</button>
+                                        <button class="btn btn-pink btn-lg" data-toggle="modal" data-target="#myModal">Sign in</button>
                                     </div>
 
                                 </div>
@@ -105,5 +105,24 @@
             </div>
         </div>
         <!--/.Mask-->
+
+        <!-- Modal Sign in -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Sign in</h4>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
