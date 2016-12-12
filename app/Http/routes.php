@@ -31,3 +31,7 @@ Route::get('/pageMenu', function() {
 Route::get('/pageMenu1', function() {
     return view('pageMenu1');
 });
+
+Route::get('/aboutus', function() {
+    return view('aboutus');
+});
