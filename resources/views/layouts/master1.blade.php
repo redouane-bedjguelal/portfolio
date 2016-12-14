@@ -18,7 +18,7 @@
         {!! Html::script('assets/js/bootstrap.min.js') !!}
         {!! Html::script('assets/js/mdb.min.js') !!}
     </head>
-    <body id="home" style="font-family: 'Baumans', cursive;">
+    <body id="home" class="font-baumans">
         <!--Navbar-->
         <nav class="navbar navbar-dark navbar-fixed-top scrolling-navbar">
             <!-- Collapse button-->
