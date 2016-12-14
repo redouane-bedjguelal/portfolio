@@ -13,7 +13,7 @@
     <td>{{$ligne->NBEPISODES}}</td>
     <td>{{$ligne->RESUME}}</td>
     <td>{{$ligne->ESTFINI}}</td>
-<td style="text-align:center;"><a href="{{ url('/modifierAdherent') }}/{{ $ligne->NUMANIME }}">
+<td style="text-align:center;"><a href="{{ url('/modifierAnime') }}/{{ $ligne->NUMANIME }}">
             <span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top" title="Modifier"></span>
         </a>
     </td>

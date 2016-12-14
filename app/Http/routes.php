@@ -21,6 +21,9 @@ Route::get('/ajouterAnime', 'AnimeController@addAnime');
 // Redirection vers la liste des anime
 Route::get('/listerAnime', 'AnimeController@getTouslesAnime');
 
+// Redirection vers le formulaire de modification d'un anime
+Route::get('/modifierAnime/{id}', ['uses' => 'AnimeController@updateAnime']);
+
 // Validation d'un ajout/modification et retour à la liste des anime
 Route::post('/validerAnime', 'AnimeController@validateAnime');
 

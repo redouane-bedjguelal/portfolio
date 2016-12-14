@@ -60,6 +60,7 @@ class Anime extends Model
                 ->insert(['NOMANIME' => $nomAnime, 'NUMSTUDIO' => $studio, 'SAISONANIME' => $saison, 'ANNEEANIME' => $annee, 'NBEPISODES' => $nbep, 'RESUME' => $resume, 'ESTFINI' => $fini]);
     }
     
+    // Fonction de modification d'un anime dans la BDD
     public function editAnime($idAnime, $studio, $nomAnime, $annee, $saison, $nbep, $fini, $resume){
         // Dialogue avec la BDD
         DB::table('anime')

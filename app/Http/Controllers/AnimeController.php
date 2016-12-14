@@ -106,6 +106,19 @@ class AnimeController extends Controller {
 
     // Modification d'un anime
     public function updateAnime($idAnime){
+        // Création et instanciation des variables
+        $unAnime = new Anime();
+        $appartenance1 = new Appartenance();
+        $appartenance2 = new Appartenance();
+        $appartenance3 = new Appartenance();
+        $unGenre = new Genre();
+        $unStudio = new Studio();
         
+        // Récupération des données de l'anime/appartenances/genre/studio
+        $unAnime = $unAnime->getAnimeById($idAnime);
+        $mesGenres = $unGenre->getGenre();
+        $mesStudios = $unStudio->getStudio();
+        
+        return view('formAnime', compact('unAnime', 'mesAppartenances', 'mesGenres','mesStudios'));
     }
 }

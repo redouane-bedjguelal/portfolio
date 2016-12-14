@@ -19,7 +19,7 @@ class Appartenance extends Model
     public function __construct(){
         $this->numanime = 0;
     }
-    
+    // Fonction récupérant toutes les appartenances
     public function getAppartenance(){
         // Dialogue avec la BDD
         $lesAppartenances = DB::table('appartenir')
@@ -28,6 +28,7 @@ class Appartenance extends Model
         return $lesAppartenances;
     }
     
+    // Fonction récupérant une appartenance
     public function getUneAppartenance($idAnime, $idGenre){
         //Dialogue avec la BDD
         $uneAppartenance = DB::table('appartenir')
@@ -37,17 +38,30 @@ class Appartenance extends Model
         return $uneAppartenance;
     }
     
+    // Fonction renvoyant toutes les appartenances pour un anime
+    public function getLesAppartenancesId($idAnime){
+        // Dialogue avec la BDD
+        $mesAppartenances = DB::table('appartenir')
+                ->where('NUMANIME', $idAnime)
+                ->select()
+                ->get();
+        return $mesAppartenances;
+    }
+    
+    // Fonction ajoutant une appartenance à la base de données
     public function addAppartenance($numanime, $numgenre){
         DB::table('appartenir')
                 ->insert(['NUMANIME' => $numanime, 'NUMGENRE' => $numgenre]);
     }
     
+    // Fonction ajoutant une appartenance à la base de données via le nom de l'anime
     public function addAppartenanceNom($nomanime, $numgenre){
         $unAnime = new Anime();
         $idAnime = $unAnime->getIdAnimeNom($nomanime);
         $this->addAppartenance($idAnime, $numgenre);
     }
     
+    // Fonction modifiant une appartenance
     public function editAppartenance($idAnime, $idGenre){
         DB::table('appartenir')
                 ->where([['NUMANIME', $idAnime], ['NUMGENRE', $idGenre]])

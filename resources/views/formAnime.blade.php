@@ -42,8 +42,9 @@
                     <label class="col-md-3 col-sm-3 control-label">Studio : </label>
 
                     <div class="col-md-3 col-sm-3">
-                        <select class="form-control" name="studio" required="">
-                            @foreach ($lesStudios as $unStudio)
+                        <select class="form-control" name="studio" value="{{$unAnime->STUDIO or ''}}" required="">
+                            <option value="0"></option>
+                            @foreach ($mesStudios as $unStudio)
                             <option value="{{$unStudio->NUMSTUDIO}}">{{$unStudio->NOMSTUDIO}}</option>
                                 @endforeach
                         </select>
@@ -56,7 +57,7 @@
                     <div class="col-md-3 col-sm-3">
                         <select class="form-control" name="genre1" required="">
                             <option value="0"></option>
-                            @foreach ($lesGenres as $unGenre)
+                            @foreach ($mesGenres as $unGenre)
                             <option value="{{$unGenre->NUMGENRE}}">{{$unGenre->LIBELLEGENRE}}</option>
                                 @endforeach
                         </select>
@@ -65,7 +66,7 @@
                     <div class="col-md-3 col-sm-3">
                         <select class="form-control" name="genre2">
                             <option value="0"></option>
-                            @foreach ($lesGenres as $unGenre)
+                            @foreach ($mesGenres as $unGenre)
                             <option value="{{$unGenre->NUMGENRE}}">{{$unGenre->LIBELLEGENRE}}</option>
                                 @endforeach
                         </select>
@@ -74,7 +75,7 @@
                     <div class="col-md-3 col-sm-3">
                         <select class="form-control" name="genre3">
                             <option value="0"></option>
-                            @foreach ($lesGenres as $unGenre)
+                            @foreach ($mesGenres as $unGenre)
                             <option value="{{$unGenre->NUMGENRE}}">{{$unGenre->LIBELLEGENRE}}</option>
                                 @endforeach
                         </select>
