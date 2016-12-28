@@ -11,7 +11,7 @@
         {!! Html::style('assets/css/bootstrap.css') !!}
         {!! Html::style('assets/css/bootstrap.min.css') !!}
         {!! Html::style('assets/css/mdb.min.css') !!}
-        {!! Html::style('assets/css/style.css') !!}
+        {!! Html::style('assets/css/styleDC.css') !!}
         <!-- SCRIPTS -->
         {!! Html::script('assets/js/jquery-3.1.1.min.js') !!}
         {!! Html::script('assets/js/tether.min.js') !!}
@@ -29,7 +29,7 @@
                 <!--Collapse content-->
                 <div class="collapse navbar-toggleable-xs" id="collapseEx">
                     <!--Navbar Brand-->
-                    <a class="navbar-brand font-baumans" href="pageMenu1">ononani.me</a>
+                    <a class="navbar-brand font-baumans" href="accueil">ononani.me</a>
                     <!--Links-->
                     <ul class="nav navbar-nav" style="float: right;">
                         <li class="nav-item">
@@ -44,7 +44,7 @@
             </div>
         </nav>
         <!--/.Navbar-->
-        <!-- yield-->
+        <!--yield-->
         @yield('content')
         <!--/.yield-->
         <!-- Modal Sign in -->

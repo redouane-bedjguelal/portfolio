@@ -31,10 +31,30 @@ Route::get('/pageMenu', function() {
     return view('pageMenu');
 });
 
-Route::get('/pageMenu1', function() {
-    return view('pageMenu1');
+Route::get('/accueil', function() {
+    return view('accueilDC');
 });
 
 Route::get('/aboutus', function() {
     return view('aboutus');
+});
+
+// Accueil LOG
+Route::get('/welcome', function() {
+    return view('accueilLOG');
+});
+
+// Page anime
+Route::get('/animeQCQ', function() {
+    return view('pageAnime');
+});
+
+// Recent episodes
+Route::get('/recent', function() {
+    return view('recentAnime');
+});
+
+// Liste anime
+Route::get('/animelist', function() {
+    return view('animeList');
 });

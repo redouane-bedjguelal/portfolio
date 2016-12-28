@@ -1,4 +1,4 @@
-@extends('layouts.master1')
+@extends('layouts.templateDC')
 @section('content')
 <!--Mask-->
 <div class="view hm-black-strong">
@@ -18,13 +18,10 @@
                     </p>
                     <br>
                     <div class="container" style="text-align: center;">
-                        <button type="button" class="btn btn-tw" data-toggle="tooltip" data-placement="bottom" title="Redouane Bedjguelal (@EyowynYasuri)" style="background-color: teal;" onclick="window.open('https://twitter.com/eyowynyasuri', '_blank')"><i class="fa fa-twitter"></i></button>
-                        <button type="button" class="btn btn-tw" data-toggle="tooltip" data-placement="bottom" title="Nicolas Kim (@Skialpin_)" style="background-color: teal;" onclick="window.open('https://twitter.com/skialpin_', '_blank')"><i class="fa fa-twitter"></i></button>
+                        <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Redouane Bedjguelal (@EyowynYasuri)" style="background-color: teal;" onclick="window.open('https://twitter.com/eyowynyasuri', '_blank')"><i class="fa fa-twitter"></i></button>
+                        <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Nicolas Kim (@Skialpin_)" style="background-color: teal;" onclick="window.open('https://twitter.com/skialpin_', '_blank')"><i class="fa fa-twitter"></i></button>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12" style="background-color: transparent; margin-top: 140%;"></div>
             </div>
         </div>
     </div>

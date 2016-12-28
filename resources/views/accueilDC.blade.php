@@ -1,4 +1,4 @@
-@extends('layouts.master1')
+@extends('layouts.templateDC')
 @section('content')
 <!--Mask-->
 <div class="view hm-black-strong">
