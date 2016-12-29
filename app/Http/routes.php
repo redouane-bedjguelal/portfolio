@@ -19,7 +19,7 @@ Route::get('/', function () { return view('pageMenu'); });
 Route::get('/ajouterAnime', 'AnimeController@addAnime');
 
 // Redirection vers la liste des anime
-Route::get('/listerAnime', 'AnimeController@getTouslesAnime');
+Route::get('/listerAnime', 'AnimeController@getTousLesAnime');
 
 // Redirection vers le formulaire de modification d'un anime
 Route::get('/modifierAnime/{id}', ['uses' => 'AnimeController@updateAnime']);
@@ -55,6 +55,4 @@ Route::get('/recent', function() {
 });
 
 // Liste anime
-Route::get('/animelist', function() {
-    return view('animeList');
-});
+Route::get('/animelist', 'AnimeController@getTousLesAnimePaginate');

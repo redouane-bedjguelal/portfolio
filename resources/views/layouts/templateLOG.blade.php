@@ -5,14 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>ononani.me</title>
-        <!-- Font Awesome -->
+        <!--Font Awesome + Baumans-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
+        <!--CSS-->
         {!! Html::style('assets/css/bootstrap.css') !!}
         {!! Html::style('assets/css/bootstrap.min.css') !!}
         {!! Html::style('assets/css/mdb.min.css') !!}
         {!! Html::style('assets/css/styleLOG.css') !!}
-        <!-- SCRIPTS -->
+        <!--SCRIPTS-->
         {!! Html::script('assets/js/jquery-3.1.1.min.js') !!}
         {!! Html::script('assets/js/tether.min.js') !!}
         {!! Html::script('assets/js/bootstrap.min.js') !!}
@@ -23,7 +24,7 @@
             <!--Navbar-->
             <nav class="navbar navbar-dark black navbar-fixed-top" style="position: fixed;">
 
-                <!-- Collapse button-->
+                <!--Collapse button-->
                 <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
                     <i class="fa fa-bars"></i>
                 </button>

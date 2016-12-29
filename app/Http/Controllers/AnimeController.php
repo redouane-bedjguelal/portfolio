@@ -17,9 +17,19 @@ class AnimeController extends Controller {
         $unAnime = new Anime();
         // Appel de la méthode de la classe métier Anime
         $mesAnime = $unAnime->getAnime();
-        ;
+        
         // On affiche la liste de ces frais
         return view('listerAnime', compact('mesAnime'));
+    }
+    
+    // Fonction récupérant tous les anime (+ pagination)
+    public function getTousLesAnimePaginate() {
+        $unAnime = new Anime();
+        // Appel de la méthode de la classe métier Anime
+        $mesAnime = $unAnime->getAnimePaginate();
+        
+        // On affiche la liste de ces frais
+        return view('animeList', compact('mesAnime'));
     }
     
     // Fonction appelant le formulaire d'ajout d'anime

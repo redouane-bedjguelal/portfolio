@@ -36,6 +36,15 @@ class Anime extends Model
         return $lesAnime;
     }
     
+    // Fonction récupérant tous les anime dans la base (+ pagination)
+    public function getAnimePaginate() {
+        // Dialogue avec la BDD
+        $lesAnime= DB::table('anime')
+                ->Select()
+                ->paginate(12);
+        return $lesAnime;
+    }
+    
     // Fonction récupérant l'ID d'un anime via son nom
     public function getIdAnimeNom($nomanime){
         // Dialogue avec la BDD

@@ -28,129 +28,34 @@
         <div class="row">
             <ul id="anime-list">
 
+                <!--anime-block-->
+                @foreach ($mesAnime as $ligne)
                 <li>
                     <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
-                        <!--anime-block-->
                         <!--TODO : IMG URL-->
                         <div class="view overlay hm-teal-strong anime-list" style="background-image: url('http://cdn.masterani.me/poster/2275GWxGpFo0.jpg');">
                             <a href="#!">
                                 <div class="mask flex-center">
                                     <!--anime-block-title-->
-                                    <p class="white-text">Masamune-kun no Revenge</p>
+                                    <p class="white-text">{{ $ligne->NOMANIME }}</p>
                                     <!--/.anime-block-title-->
                                 </div>
                             </a>
                         </div>
-                        <!--/.anime-block-->
                     </div>
                 </li>
+                @endforeach
+                <!--/.anime-block-->
 
-                <li>
-                    <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
-                        <!--anime-block-->
-                        <!--TODO : IMG URL-->
-                        <div class="view overlay hm-teal-strong anime-list" style="background-image: url('http://cdn.masterani.me/poster/2275GWxGpFo0.jpg');">
-                            <a href="#!">
-                                <div class="mask flex-center">
-                                    <!--anime-block-title-->
-                                    <p class="white-text">Masamune-kun no Revenge</p>
-                                    <!--/.anime-block-title-->
-                                </div>
-                            </a>
-                        </div>
-                        <!--/.anime-block-->
-                    </div>
-                </li>
-
-                <li>
-                    <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
-                        <!--anime-block-->
-                        <!--TODO : IMG URL-->
-                        <div class="view overlay hm-teal-strong anime-list" style="background-image: url('http://cdn.masterani.me/poster/2275GWxGpFo0.jpg');">
-                            <a href="#!">
-                                <div class="mask flex-center">
-                                    <!--anime-block-title-->
-                                    <p class="white-text">Masamune-kun no Revenge</p>
-                                    <!--/.anime-block-title-->
-                                </div>
-                            </a>
-                        </div>
-                        <!--/.anime-block-->
-                    </div>
-                </li>
-
-                <li>
-                    <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
-                        <!--anime-block-->
-                        <!--TODO : IMG URL-->
-                        <div class="view overlay hm-teal-strong anime-list" style="background-image: url('http://cdn.masterani.me/poster/2275GWxGpFo0.jpg');">
-                            <a href="#!">
-                                <div class="mask flex-center">
-                                    <!--anime-block-title-->
-                                    <p class="white-text">Masamune-kun no Revenge</p>
-                                    <!--/.anime-block-title-->
-                                </div>
-                            </a>
-                        </div>
-                        <!--/.anime-block-->
-                    </div>
-                </li>
-
-                <li>
-                    <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
-                        <!--anime-block-->
-                        <!--TODO : IMG URL-->
-                        <div class="view overlay hm-teal-strong anime-list" style="background-image: url('http://cdn.masterani.me/poster/2275GWxGpFo0.jpg');">
-                            <a href="#!">
-                                <div class="mask flex-center">
-                                    <!--anime-block-title-->
-                                    <p class="white-text">Masamune-kun no Revenge</p>
-                                    <!--/.anime-block-title-->
-                                </div>
-                            </a>
-                        </div>
-                        <!--/.anime-block-->
-                    </div>
-                </li>
-
-                <li>
-                    <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
-                        <!--anime-block-->
-                        <!--TODO : IMG URL-->
-                        <div class="view overlay hm-teal-strong anime-list" style="background-image: url('http://cdn.masterani.me/poster/2275GWxGpFo0.jpg');">
-                            <a href="#!">
-                                <div class="mask flex-center">
-                                    <!--anime-block-title-->
-                                    <p class="white-text">Masamune-kun no Revenge</p>
-                                    <!--/.anime-block-title-->
-                                </div>
-                            </a>
-                        </div>
-                        <!--/.anime-block-->
-                    </div>
-                </li>
-
-                <li>
-                    <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
-                        <!--anime-block-->
-                        <!--TODO : IMG URL-->
-                        <div class="view overlay hm-teal-strong anime-list" style="background-image: url('http://cdn.masterani.me/poster/2275GWxGpFo0.jpg');">
-                            <a href="#!">
-                                <div class="mask flex-center">
-                                    <!--anime-block-title-->
-                                    <p class="white-text">Masamune-kun no Revenge</p>
-                                    <!--/.anime-block-title-->
-                                </div>
-                            </a>
-                        </div>
-                        <!--/.anime-block-->
-                    </div>
-                </li>
-
-                
             </ul>
         </div>
         <!--/.anime-row-->
+        <hr>
+        <div style="text-align: center;">
+        <div class="custom-pagination unselectable" style="display: inline-block;">
+            {!! $mesAnime->render() !!}
+        </div>
+        </div>
     </div>
     <!--/.Main layout-->
     <!-- INFINITE SCROLL http://wern-ancheta.com/blog/2015/03/01/how-to-implement-scroll-in-laravel/ -->
