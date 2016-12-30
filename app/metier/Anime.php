@@ -41,7 +41,7 @@ class Anime extends Model
         // Dialogue avec la BDD
         $lesAnime= DB::table('anime')
                 ->Select()
-                ->paginate(12);
+                ->get();
         return $lesAnime;
     }
     

@@ -1,5 +1,6 @@
 @extends('layouts.templateLOG')
 @section('content')
+<title>ononani.me</title>
 <style>
     html,
     body,

@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ononani.me</title>
+        <!-- Tab icon -->
+        <link rel="icon" href="http://i.imgur.com/quLWzbI.png">
+        
         <!--Font Awesome + Baumans-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
@@ -38,10 +40,10 @@
                         <!--Links-->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="recent">RECENT EPISODES</a>
+                                <a class="nav-link" href="recentEpisodes">RECENT EPISODES</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="animelist">ANIME LIST</a>
+                                <a class="nav-link" href="animeList">ANIME LIST</a>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav" style="float: right;">

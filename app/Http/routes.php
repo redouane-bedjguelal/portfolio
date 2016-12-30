@@ -49,10 +49,8 @@ Route::get('/animeQCQ', function() {
     return view('pageAnime');
 });
 
-// Recent episodes
-Route::get('/recent', function() {
-    return view('recentAnime');
-});
-
 // Liste anime
-Route::get('/animelist', 'AnimeController@getTousLesAnimePaginate');
+Route::get('/animeList', 'AnimeController@getTousLesAnimePaginate');
+
+// Liste episodes (du plus récent au plus ancien)
+Route::get('/recentEpisodes', 'EpisodeController@getTousLesEpisodesPaginate');

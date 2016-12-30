@@ -5,15 +5,16 @@ namespace App\metier;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 
-class Genre extends Model
+class Episode extends Model
 {
     // On déclare la table genre
     
-    protected $table = 'genre';
+    protected $table = 'episode';
     
     protected $fillable = [
-        'numgenre',
-        'libellegenre'
+        'numanime',
+        'numepisode',
+        'nomepisode'
     ];
     
     // Constructeur de genre
@@ -21,12 +22,12 @@ class Genre extends Model
         $this->numgenre = 0;
     }
     
-    // Fonction récupérant tous les genres dans la base
-    public function getGenres(){
+    // Fonction récupérant tous les épisodes dans la base
+    public function getEpisode(){
         // Dialogue avec la BDD
-        $lesGenres = DB::table('genre')
+        $lesGenres = DB::table('episode')
                 ->select()
                 ->get();
-        return $lesGenres;
+        return $lesEpisodes;
     }
 }
