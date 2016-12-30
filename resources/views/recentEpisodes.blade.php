@@ -8,7 +8,7 @@
         <!--Page heading-->
         <div class="row">
             <div class="col-md-12">
-                <h1 class="h1-responsive bold font-lightteal">MOST RECENT
+                <h1 class="h1-responsive bold font-lightteal">RECENT
                     <small class="text-muted bold">EPISODES</small>
                 </h1>
             </div>
