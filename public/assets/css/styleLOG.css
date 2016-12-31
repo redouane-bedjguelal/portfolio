@@ -118,6 +118,11 @@ body {
 .anime-grid {
     text-align: center;
     padding-bottom: 2%;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
 }
 .anime-list {
     background-size: 100%;
@@ -139,6 +144,11 @@ body {
 /* episode-style */
 .episode-grid {
     padding-bottom: 0px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
 }
 .episode-list {
     background-size: 100%;
@@ -216,28 +226,6 @@ body {
     color: #fff;
 }
 
-/* genre-select-list-style */
-.genre-select-list {
-    margin-top: -6px;
-    color: #00A0A0;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: none;
-}
-.genre-select-list:active {
-    color: #818a91;
-}
-.genre-select-list:focus {
-    color: #818a91;
-}
-.genre-select-list-drop {
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: #008080;
-}
-
 /* episode pages */
 .video-block {
     position: relative;
@@ -265,20 +253,41 @@ body {
     -webkit-transition:.2s;
     transition:.2s;
 }
-.arrows {
-    font-size: 30px;
-}
 .video-bottom-buttons:hover {
     box-shadow: 0px 10px 10px -10px #000;
     color: #fff;
 }
+.arrows {
+    font-size: 30px;
+}
+
+/* all maj */
 .uppercase {
     text-transform: uppercase;
 }
+
+/* too long text */
 .overflow-hidden {
     text-align: left;
     width : 70%;
     overflow:hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+/* genre list */
+a .genre-link {
+    color: #00A0A0;
+    font-size: 16px;
+    border-right: 10px solid #aaa;
+    margin-bottom: 10px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+a .genre-link:hover {
+    color: #fff;
+    border-color: #00A0A0;
 }

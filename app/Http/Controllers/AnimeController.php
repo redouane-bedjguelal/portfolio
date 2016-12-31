@@ -127,12 +127,8 @@ class AnimeController extends Controller {
     public function getTousLesAnimePaginate() {
         // Appel de la méthode de la classe métier Anime
         $mesAnime = Anime::orderBy('NOMANIME')->paginate(12);
-        
-        $unGenre = new Genre();
-        // Appel de la méthode de la classe métier Anime
-        $mesGenres = $unGenre->getGenres();
-        
+
         // On affiche la liste
-        return view('animeList', compact('mesAnime', 'mesGenres'));
+        return view('animeList', compact('mesAnime'));
     }
 }

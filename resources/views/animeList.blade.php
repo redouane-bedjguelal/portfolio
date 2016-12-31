@@ -13,28 +13,12 @@
                         <small class="text-muted bold">LIST</small>
                     </h1>
                 </div>
-                <!--FAIRE UNE AUTRE PAGE POUR ANIME PAR GENRE
-                <div style="float: right; padding-top: -20px;">
-                    <form name="selectGenre" action="animeList" method="GET">
-                        <fieldset class="form-group" onchange="this.form.submit()">
-                            <select class="form-control genre-select-list" name="genre">
-                                <option class="genre-select-list-drop" selected="selected" value="">-- select a genre --</option>
-                                <option class="genre-select-list-drop" value="">none</option>
-                                @foreach ($mesGenres as $ligne)
-                                <option class="genre-select-list-drop" value="{{ $ligne->NUMGENRE }}">{{ $ligne->LIBELLEGENRE }}</option>
-                                @endforeach
-                            </select>
-                            </table>
-                        </fieldset>
-                    </form>
-                </div>
-                -->
             </div>
         </div>
         <!--/.Page heading-->
         <hr>
         <!--anime-row-->
-        <div class="row" id="content">
+        <div class="row" id="results-wrapper">
             <ul id="anime-list">
 
                 <!--anime-block-->
@@ -58,13 +42,20 @@
             </ul>
         </div>
         <!--/.anime-row-->
-        <hr style="margin-top: -15px;">
+        <hr>
         <div style="text-align: center;">
-            <div class="custom-pagination unselectable" style="display: inline-block;">
-                {!! $mesAnime->render() !!}
+            <div id="pagination-wrapper" class="custom-pagination unselectable" style="display: inline-block;">
+                @include('layouts.pagination', ['paginator' => $mesAnime])
             </div>
         </div>
     </div>
     <!--/.Main layout-->
 </main>
+<!--no loading-->
+<script>
+    $(document).on('click', '#pagination-wrapper a', function (e) {
+        e.preventDefault();
+        $('#results-wrapper').load($(this).attr('href') + ' #results-wrapper');
+    });
+</script>
 @stop

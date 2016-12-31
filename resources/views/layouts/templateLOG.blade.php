@@ -45,6 +45,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="animeList">ANIME LIST</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="genreList">GENRE LIST</a>
+                            </li>
                         </ul>
                         <ul class="nav navbar-nav" style="float: right;">
                             <li class="nav-item">

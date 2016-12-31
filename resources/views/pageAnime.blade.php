@@ -5,7 +5,7 @@
     <div class="container" style="padding-top: 100px;">
         <div class="row">
             <!--Left row-->
-            <div class="col-lg-4 col-md-5">
+            <div class="col-lg-4 col-md-5" style="margin-bottom: 20px;">
                 <img style="width: 100%; border-radius: 0; margin-bottom: 20px;" src="http://cdn.masterani.me/poster/2275GWxGpFo0.jpg" alt="anime-img">
                 <div class="anime-infos font-aaa ">
                     <span class="unselectable">episodes</span>
@@ -53,7 +53,7 @@
                     Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibrabat, Augustum actus eius exaggerando creberrime docens, idque, incertum qua mente, ne lateret adfectans. quibus mox Caesar acrius efferatus, velut contumaciae quoddam vexillum altius erigens, sine respectu salutis alienae vel suae ad vertenda opposita instar rapidi fluminis irrevocabili impetu ferebatur.
                 </div>
                 <!--Episodes-->
-                <div class="row">
+                <div class="row" style="margin-bottom: 20px;">
                     <ul id="episode-list">
 
                         <!--TODO : FOREACH-->

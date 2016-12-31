@@ -16,7 +16,7 @@
         <!--/.Page heading-->
         <hr>
         <!--episode-rows-->
-        <div class="row">
+        <div class="row" id="results-wrapper">
             <ul id="episode-list">
 
                 @foreach ($mesEpisodes as $ligne)
@@ -34,7 +34,7 @@
                         </div>
                         <!--/.episode-block-->
                         <!--episode-block-title-->
-                        
+
                         <a href="#!" title="{{ $ligne2->NOMANIME }}">
                             <div style="float: left; width: 80%;">
                                 <p class="episode-name">{{ $ligne2->NOMANIME }}</p>
@@ -53,13 +53,20 @@
             </ul>
         </div>
         <!--/.episode-row-->
-        <hr style="margin-top: -15px;">
+        <hr>
         <div style="text-align: center;">
-            <div class="custom-pagination unselectable" style="display: inline-block;">
-                {!! $mesEpisodes->render() !!}
+            <div id="pagination-wrapper" class="custom-pagination unselectable" style="display: inline-block;">
+                @include('layouts.pagination', ['paginator' => $mesEpisodes])
             </div>
         </div>
     </div>
     <!--/.Main layout-->
 </main>
+<!--no loading-->
+<script>
+    $(document).on('click', '#pagination-wrapper a', function (e) {
+        e.preventDefault();
+        $('#results-wrapper').load($(this).attr('href') + ' #results-wrapper');
+    });
+</script>
 @stop

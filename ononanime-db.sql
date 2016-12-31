@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 31 Décembre 2016 à 12:16
+-- Généré le :  Sam 31 Décembre 2016 à 16:33
 -- Version du serveur :  10.1.13-MariaDB
 -- Version de PHP :  5.6.21
 
@@ -181,8 +181,49 @@ CREATE TABLE `genre` (
 --
 
 INSERT INTO `genre` (`NUMGENRE`, `LIBELLEGENRE`) VALUES
-(1, 'Shounen'),
-(2, 'Humour');
+(1, 'Action'),
+(2, 'Adventure'),
+(3, 'Cars'),
+(4, 'Comedy'),
+(5, 'Dementia'),
+(6, 'Demons'),
+(7, 'Drama'),
+(8, 'Ecchi'),
+(9, 'Fantasy'),
+(10, 'Game'),
+(11, 'Harem'),
+(12, 'Hentai'),
+(13, 'Historical'),
+(14, 'Horror'),
+(15, 'Josei'),
+(16, 'Kids'),
+(17, 'Magic'),
+(18, 'Martial Arts'),
+(19, 'Mecha'),
+(20, 'Military'),
+(21, 'Music'),
+(22, 'Mystery'),
+(23, 'Parody'),
+(24, 'Police'),
+(25, 'Psychological'),
+(26, 'Romance'),
+(27, 'Samurai'),
+(28, 'School'),
+(29, 'Sci-Fi'),
+(30, 'Seinen'),
+(31, 'Shoujo'),
+(32, 'Shoujo Ai'),
+(33, 'Shounen'),
+(34, 'Shounen Ai'),
+(35, 'Slice of Life'),
+(36, 'Space'),
+(37, 'Sports'),
+(38, 'Super Power'),
+(39, 'Supernatural'),
+(40, 'Thriller'),
+(41, 'Vampire'),
+(42, 'Yaoi'),
+(43, 'Yuri');
 
 -- --------------------------------------------------------
 

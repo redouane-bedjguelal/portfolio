@@ -57,5 +57,8 @@ Route::get('/episodeQCQ', function() {
 // Liste anime
 Route::get('/animeList', 'AnimeController@getTousLesAnimePaginate');
 
+// Liste genres
+Route::get('/genreList', 'GenreController@getTousLesGenres');
+
 // Liste episodes (du plus récent au plus ancien)
 Route::get('/recentEpisodes', 'EpisodeController@getTousLesEpisodesPaginate');

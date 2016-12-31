@@ -1,5 +1,6 @@
 @extends('layouts.templateLOG')
 @section('content')
+<title>Ep. 12 Twice - ononani.me</title>
 <main>
     <!--Main layout-->
     <div class="container anime-content">
