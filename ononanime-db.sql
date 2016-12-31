@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 30 Décembre 2016 à 17:52
+-- Généré le :  Sam 31 Décembre 2016 à 12:16
 -- Version du serveur :  10.1.13-MariaDB
 -- Version de PHP :  5.6.21
 
@@ -141,6 +141,7 @@ CREATE TABLE `episode` (
   `NUMANIME` int(11) NOT NULL,
   `NUMEPISODE` int(11) NOT NULL,
   `NOMEPISODE` varchar(200) DEFAULT NULL,
+  `IDVIDEO` varchar(50) DEFAULT NULL,
   `DATEHEURE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -148,21 +149,21 @@ CREATE TABLE `episode` (
 -- Contenu de la table `episode`
 --
 
-INSERT INTO `episode` (`NUMANIME`, `NUMEPISODE`, `NOMEPISODE`, `DATEHEURE`) VALUES
-(1, 1, 'Kanna, the Cutting Sword', '2016-12-30 16:31:26'),
-(1, 2, 'Namakura, the Decapitation Sword', '2016-12-30 16:31:30'),
-(1, 3, 'Tsurugi, the Sword of Thousand', '2016-12-30 16:31:33'),
-(1, 4, 'Hari, the Slender Sword', '2016-12-30 16:31:36'),
-(1, 5, 'Yoroi, the Rebel Sword', '2016-12-30 16:31:40'),
-(1, 6, 'Kanazuchi, the Twin Sword', '2016-12-30 16:31:45'),
-(1, 7, 'Bita, the Evil Sword', '2016-12-30 16:31:48'),
-(1, 8, 'Kanzashi, the Sword of Precision', '2016-12-30 16:31:52'),
-(1, 9, 'Nokogiri, the Sword of Kings', '2016-12-30 16:31:56'),
-(1, 10, 'Hakari, the Sword of Truth', '2016-12-30 16:31:59'),
-(1, 11, 'Mekki, the Poison Sword', '2016-12-30 16:32:02'),
-(1, 12, 'Juu, the Flame Sword', '2016-12-30 16:32:05'),
-(2, 1, 'Kizumonogatari I: Tekketsu-hen', '2016-12-30 16:44:54'),
-(3, 1, 'Kizumonogatari II: Nekketsu-hen', '2016-12-30 16:51:30');
+INSERT INTO `episode` (`NUMANIME`, `NUMEPISODE`, `NOMEPISODE`, `IDVIDEO`, `DATEHEURE`) VALUES
+(1, 1, 'Kanna, the Cutting Sword', 'ePpPVE-GGJw', '2016-12-31 10:56:45'),
+(1, 2, 'Namakura, the Decapitation Sword', 'ePpPVE-GGJw', '2016-12-31 10:56:52'),
+(1, 3, 'Tsurugi, the Sword of Thousand', 'ePpPVE-GGJw', '2016-12-31 10:56:55'),
+(1, 4, 'Hari, the Slender Sword', 'ePpPVE-GGJw', '2016-12-31 10:56:59'),
+(1, 5, 'Yoroi, the Rebel Sword', 'ePpPVE-GGJw', '2016-12-31 10:57:02'),
+(1, 6, 'Kanazuchi, the Twin Sword', 'ePpPVE-GGJw', '2016-12-31 10:57:05'),
+(1, 7, 'Bita, the Evil Sword', 'ePpPVE-GGJw', '2016-12-31 10:57:12'),
+(1, 8, 'Kanzashi, the Sword of Precision', 'ePpPVE-GGJw', '2016-12-31 10:57:38'),
+(1, 9, 'Nokogiri, the Sword of Kings', 'ePpPVE-GGJw', '2016-12-31 10:57:43'),
+(1, 10, 'Hakari, the Sword of Truth', 'ePpPVE-GGJw', '2016-12-31 10:57:47'),
+(1, 11, 'Mekki, the Poison Sword', 'ePpPVE-GGJw', '2016-12-31 10:57:51'),
+(1, 12, 'Juu, the Flame Sword', 'ePpPVE-GGJw', '2016-12-31 10:57:54'),
+(2, 1, 'Kizumonogatari I: Tekketsu-hen', 'c7rCyll5AeY', '2016-12-31 10:58:50'),
+(3, 1, 'Kizumonogatari II: Nekketsu-hen', 'c7rCyll5AeY', '2016-12-31 10:59:00');
 
 -- --------------------------------------------------------
 

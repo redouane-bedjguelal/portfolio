@@ -49,6 +49,11 @@ Route::get('/animeQCQ', function() {
     return view('pageAnime');
 });
 
+// Page épisode
+Route::get('/episodeQCQ', function() {
+    return view('pageEpisode');
+});
+
 // Liste anime
 Route::get('/animeList', 'AnimeController@getTousLesAnimePaginate');
 
