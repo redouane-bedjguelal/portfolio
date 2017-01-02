@@ -1,9 +1,18 @@
-@extends('layouts/master')
+@extends('layouts.templateLOG')
 @section('content')
-
-<body>
-    <div>
-        <h1>Ajouter un anime</h1>
+<title>Add / Edit Anime - ononani.me</title>
+<main>
+    <div class="container font-white anime-content">
+        <!--Page heading-->
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="h1-responsive bold font-lightteal">ADD / EDIT
+                    <small class="text-muted bold">ANIME</small>
+                </h1>
+            </div>
+        </div>
+        <!--/.Page heading-->
+        <hr>
         {!! Form::open(['url' => 'validerAnime']) !!}
         <div class="col-md-12  col-sm-12 well well-md">
             <center><h1> </h1></center>
@@ -46,7 +55,7 @@
                             <option value="0"></option>
                             @foreach ($mesStudios as $unStudio)
                             <option value="{{$unStudio->NUMSTUDIO}}">{{$unStudio->NOMSTUDIO}}</option>
-                                @endforeach
+                            @endforeach
                         </select>
                     </div>
                     <br/>
@@ -59,7 +68,7 @@
                             <option value="0"></option>
                             @foreach ($mesGenres as $unGenre)
                             <option value="{{$unGenre->NUMGENRE}}">{{$unGenre->LIBELLEGENRE}}</option>
-                                @endforeach
+                            @endforeach
                         </select>
                     </div>
 
@@ -68,7 +77,7 @@
                             <option value="0"></option>
                             @foreach ($mesGenres as $unGenre)
                             <option value="{{$unGenre->NUMGENRE}}">{{$unGenre->LIBELLEGENRE}}</option>
-                                @endforeach
+                            @endforeach
                         </select>
                     </div>
 
@@ -77,7 +86,7 @@
                             <option value="0"></option>
                             @foreach ($mesGenres as $unGenre)
                             <option value="{{$unGenre->NUMGENRE}}">{{$unGenre->LIBELLEGENRE}}</option>
-                                @endforeach
+                            @endforeach
                         </select>
                     </div>
 
@@ -100,7 +109,7 @@
                 <div class="form-group">
                     <label class="col-md-3 col-sm-3 control-label">Résumé : </label>
                     <div class="col-md-3  col-sm-3">
-                        <textarea rows="5" cols="60" name="resume" placeholder="Entrez un résumé">{{$unAnime->RESUME or ''}}</textarea> 
+                        <textarea class="font-white" rows="5" cols="60" name="resume" placeholder="Entrez un résumé">{{$unAnime->RESUME or ''}}</textarea> 
                     </div>
                 </div>
 
@@ -123,7 +132,6 @@
         {!! Form::close() !!}
     </div>
 </div>
-</body>
-
+</main>
 @stop
 
