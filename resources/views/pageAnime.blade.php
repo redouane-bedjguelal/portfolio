@@ -1,5 +1,6 @@
 @extends('layouts.templateLOG')
 @section('content')
+<title> - ononani.me</title>
 <main>
     <!--Main layout-->
     <div class="container" style="padding-top: 100px;">
