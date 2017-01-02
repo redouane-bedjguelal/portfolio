@@ -22,7 +22,7 @@ class Genre extends Model
     }
     
     // Fonction récupérant tous les genres dans la base
-    public function getGenres(){
+    public function getGenre(){
         // Dialogue avec la BDD
         $lesGenres = DB::table('genre')
                 ->select()

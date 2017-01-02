@@ -31,11 +31,11 @@ class AnimeController extends Controller {
         $unStudio = new Studio();
 
         // Appel des méthodes des classes métiers
-        $lesGenres = $unGenre->getGenre();
-        $lesStudios = $unStudio->getStudio();
+        $mesGenres = $unGenre->getGenre();
+        $mesStudios = $unStudio->getStudio();
 
         // Redirection vers la page formAnime avec passages des genres et des studios
-        return view('formAnime', compact('lesGenres', 'lesStudios'));
+        return view('formAnime', compact('mesGenres', 'mesStudios'));
     }
 
     // A FINIR

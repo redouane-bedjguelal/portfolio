@@ -17,7 +17,7 @@ class GenreController extends Controller {
     public function getTousLesGenres() {
         $unGenre = new Genre();
         // Appel de la méthode de la classe métier Genre
-        $mesGenres = $unGenre->getGenres();
+        $mesGenres = $unGenre->getGenre();
         
         // On affiche la liste
         return view('genreList', compact('mesGenres'));
