@@ -46,8 +46,37 @@ class User extends Model
         Session::put('id', 0);
     }
 
-    // Fonction de modification d'un utilisateur
+    // Fonction de modification d'un utilisateur TO DO
     public function editUser($loginUser){
         
+    }
+    
+    // Fonction de récupération des données utilisateur via le login
+    public function getUserByName($loginUser){
+        // Dialogue avec la BDD
+        $user = DB::table('utilisateur')
+                ->where('LOGINUSER', $loginUser)
+                ->first();
+        return $user;
+    }
+    
+    // Fonction vérifiant la disponibilité du login
+    public function checkLogin($loginUser){
+        $dispo = true;
+        //Dialogue avec la BDD
+        $user = DB::table('utilisateur')
+                ->where('LOGINUSER', $loginUser)
+                ->first();
+        if($user){
+            $dispo = false;
+        }
+        return $dispo;
+    }
+    
+    // Fonction ajoutant un utilisateur dans la base de données
+    public function addUser($login, $pwd){
+        //Dialogue avec la BDD
+        DB::table('utilisateur')
+                ->insert(['LOGINUSER' => $login, 'PWDUSER' =>$pwd]);
     }
 }

@@ -51,10 +51,10 @@
                         </ul>
                         <ul class="nav navbar-nav" style="float: right;">
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                                <a class="nav-link" href="userPage"><i class="fa fa-user" aria-hidden="true"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                                <a class="nav-link" href="signOut"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
                             </li>
                         </ul>
                     </div>

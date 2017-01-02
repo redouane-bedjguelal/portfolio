@@ -22,19 +22,44 @@ class UserController extends Controller
     
     // Fonction de connexion
     public function signIn(){
+        $erreur = "";
         $login = Request::input('login');
         $pwd = Request::input('password');
         $user = new User();
         $connected = $user->login($login, $pwd);
         if($connected){
-            return view('welcome');
+            return view('accueilLOG');
         }
         else{
-            
+            $erreur = "Unknown username or password !";
+            return view('accueilDC', compact('erreur'));
         }
     }
     
-    // Fonction de modification d'un utilisateur
+    // Fonction de déconnexion
+    public function signOut(){
+        $user = new User();
+        $user->logout();
+        return redirect('/accueil');
+    }
+    
+    // Fonction d'inscription
+    public function signUp(){
+        $user = new User();
+        $erreur = "";
+        $login = Request::input('login');
+        $pwd = Request::input('password');
+        if($user->checkLogin($login)){
+            $user->addUser($login, $pwd);
+            $erreur = "Account created successfully !";
+        }
+        else{
+            $erreur = "Username already in use.";
+        }
+        return view('accueilDC', compact('erreur'));
+    }
+    
+    // Fonction de modification d'un utilisateur TO DO
     public function modification($loginUser){
         $unUser = new User();
         $unUser = $unUser->getAdherent($id);
@@ -43,5 +68,18 @@ class UserController extends Controller
         $uneVilleAdherent = $unAdh->getVilleAdherent($id);
         
         return view('vues/formAdherentModif', compact('unAdherent','unNomAdherent','unPrenomAdherent','uneVilleAdherent'));
+    }
+    
+    // Fonction récupérant les informations d'un utilisateur
+    public function showUser($idUser){
+        $user = new User();
+        $user = $user->getUserByName($idUser);
+        return view('pageUser.id', compact('user'));
+    }
+    
+    // Fonction récupérant l'ID d'un utilisateur via la session
+    public function getCurrentUser(){
+        $id = Auth::user()->name;
+        return view('pageUser', compact('id'));
     }
 }

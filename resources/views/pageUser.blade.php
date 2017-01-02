@@ -1,16 +1,16 @@
 @extends('layouts.templateLOG')
 @section('content')
-<title><!--LOGINUSER-->'s page - ononani.me</title>
+<title>{{$user->LOGINUSER}}'s page - ononani.me</title>
 <main>
     <!--Main layout-->
     <div class="container anime-content" style="min-height: 500px;">
         <div class="row">
             <div class="col-sm-3">
                 <div class="anime-title font-white">
-                    LoginUser
+                    {{$user->LOGINUSER}}
                 </div>
                 <hr>
-                <div class="col-sm-3 square" style="background-image: url('http://www.guide-du-chien.com/wp-content/uploads/2016/06/top-10-grand-chien.jpg');"></div>
+                <div class="col-sm-3 square" style="background-image: url('{{$user->AVATARUSER}}');"></div>
                 <hr>
             </div>
             <!--anime-row-->
