@@ -14,7 +14,9 @@ class Episode extends Model
     protected $fillable = [
         'numanime',
         'numepisode',
-        'nomepisode'
+        'nomepisode',
+        'idvideo',
+        'dateheure'
     ];
     
     // Constructeur de genre
@@ -25,8 +27,17 @@ class Episode extends Model
     // Fonction récupérant tous les épisodes dans la base
     public function getEpisode(){
         // Dialogue avec la BDD
-        $lesGenres = DB::table('episode')
+        $lesEpisodes= DB::table('episode')
                 ->select()
+                ->get();
+        return $lesEpisodes;
+    }
+    
+    // Fonction récupérant tous les épisodes d'un anime
+    public function getEpisodesByIdAnime($idAnime){
+        // Dialogue avec la BDD
+        $lesEpisodes = DB::table('episode')
+                ->where('NUMANIME',$idAnime)
                 ->get();
         return $lesEpisodes;
     }

@@ -73,3 +73,18 @@ Route::get('/genreList', 'GenreController@getTousLesGenres');
 
 // Liste episodes (du plus récent au plus ancien)
 Route::get('/recentEpisodes', 'EpisodeController@getTousLesEpisodesPaginate');
+
+// Connexion
+Route::post('/login', 'UserController@signIn');
+
+// Inscription
+Route::post('/signUp', 'UserController@signUp');
+
+// Déconnexion
+Route::get('/signOut', 'UserController@signOut');
+
+// Affichage de la page perso de l'utilisateur
+Route::get('/userPage/{id}', ['uses' => 'UserController@showUser']);
+
+// Appel de la page perso de l'utilisateur
+Route::get('/userPage', 'UserController@getCurrentUser');

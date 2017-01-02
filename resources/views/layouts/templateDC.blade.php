@@ -64,17 +64,19 @@
                                 <hr class="mt-2 mb-2">
                             </div>
                             <!--Body-->
+                            {!! Form::open(['url' => 'login']) !!}
                             <div class="md-form">
                                 <i class="fa fa-asterisk prefix"></i>
-                                <input type="text" id="form1" class="form-control" placeholder="Username">
+                                <input type="text" id="form1" class="form-control" name="login" placeholder="Username">
                             </div>
                             <div class="md-form">
                                 <i class="fa fa-unlock-alt prefix"></i>
-                                <input type="password" id="form2" class="form-control" placeholder="Password">
+                                <input type="password" id="form2" class="form-control" name="password" placeholder="Password">
                             </div>
                             <div class="text-xs-center">
                                 <button class="btn btn-dark-green">Login</button>
                             </div>
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 </div>

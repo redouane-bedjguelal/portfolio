@@ -26,18 +26,25 @@
                                 <h3><i class="fa fa-user"></i> Register</h3>
                             </div>
                             <!--Body-->
+                            {!! Form::open(['url' => 'signUp']) !!}
                             <div class="md-form">
                                 <i class="fa fa-asterisk prefix fff"></i>
-                                <input type="text" id="form1" class="form-control" placeholder="Username">
+                                <input type="text" name="login" id="form1" class="form-control" placeholder="Username">
                             </div>
                             <div class="md-form">
                                 <i class="fa fa-unlock-alt prefix fff"></i>
-                                <input type="password" id="form2" class="form-control" placeholder="Password">
+                                <input type="password" name="password" id="form2" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="text-xs-center">
+                                <!-- TO DO changer couleur erreur -->
+                                <font color='red'>{{$erreur or ''}}</font>
                             </div>
                             <div class="text-xs-center">
                                 <button class="btn btn-primary btn-dark-green btn-lg">Sign up</button>
-                                <button class="btn btn-pink btn-lg" data-toggle="modal" data-target="#myModal">Sign in</button>
+                                
+                                <button class="btn btn-pink btn-lg" data-toggle="modal" data-target="#myModal" type="button">Sign in</button>
                             </div>
+                            {!! Form::close() !!}
                         </div>
                     </div>
                     <!--/.Form-->
