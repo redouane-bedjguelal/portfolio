@@ -18,13 +18,15 @@
                 </div>
                 <div class="anime-infos font-aaa">
                     <span class="unselectable">aired</span>
-                    <!--TODO : SAISON + ANNEE-->
-                    <span class="anime-infos-right font-white">ccc</span>
+                    <span class="anime-infos-right font-white">{{$unAnime->SAISONANIME}} {{$unAnime->ANNEEANIME}}</span>
                 </div>
                 <div class="anime-infos font-aaa">
                     <span class="unselectable">status</span>
-                    <!--TODO : IF BOOL-->
-                    <span class="anime-infos-right font-white">ddd</span>
+                    <span class="anime-infos-right font-white">
+                        @if($unAnime->ESTFINI==0)Ongoing
+                        @else Finished
+                        @endif
+                    </span>
                 </div>
                 <div class="anime-infos font-aaa">
                     <span class="unselectable">rating</span>
@@ -43,7 +45,7 @@
                 </div>
                 <div class="font-aaa">
                     <ul class="anime-genres unselectable">
-                        <!--TODO : FOREACH + RECHERCHE PAR GENRE-->
+                        <!--TODO : RECHERCHE PAR GENRE-->
                         <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">{{$mesGenres[0]}}</a></li>
                         @if($mesGenres[1]!='')
                         <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">{{$mesGenres[1]}}</a></li>
@@ -54,19 +56,19 @@
                     </ul>
                 </div>
                 <div class="anime-synopsis font-aaa" style="margin-bottom: 20px;">
-                    <!--TODO : ADD SYNOPSIS-->
-                    Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibrabat, Augustum actus eius exaggerando creberrime docens, idque, incertum qua mente, ne lateret adfectans. quibus mox Caesar acrius efferatus, velut contumaciae quoddam vexillum altius erigens, sine respectu salutis alienae vel suae ad vertenda opposita instar rapidi fluminis irrevocabili impetu ferebatur.
+                    {{$unAnime->RESUME}}
                 </div>
                 <!--Episodes-->
                 <div class="row" style="margin-bottom: 20px;">
                     <ul id="episode-list">
 
                         <!--TODO : FOREACH-->
+                        @foreach ($mesEpisodes as $unEp)
                         <li>
                             <div class="col-lg-4 col-md-6 episode-grid">
                                 <!--episode-block-->
-                                <div class="view overlay hm-teal-strong episode-list-2" style="background-image: url('http://cdn.masterani.me/poster/2275GWxGpFo0.jpg');">
-                                    <a href="#!">
+                                <div class="view overlay hm-teal-strong episode-list-2" style="background-image: url('{{$unAnime->IMGANIME}}');">
+                                    <a href="../episodeQCQ">
                                         <div class="mask">
                                             <i class="fa fa-play-circle play-button"></i>
                                         </div>
@@ -74,19 +76,19 @@
                                 </div>
                                 <!--/.episode-block-->
                                 <!--episode-block-title-->
-                                <a href="#!" title="Buta"><!--TODO : NOM EP-->
+                                <a href="../episodeQCQ" title="{{$unEp->NOMEPISODE}}">
                                     <div style="float: left; width: 80%;">
-                                        <p class="episode-name">Buta</p><!--TODO : NOM EP-->
+                                        <p class="episode-name">{{$unEp->NOMEPISODE}}</p>
                                     </div>
                                 </a>
                                 <div style="float: right;">
-                                    <p class="episode-number">Ep. 1</p>
+                                    <p class="episode-number">Ep.{{$unEp->NUMEPISODE}}</p>
                                 </div>
                                 <!--/.episode-block-title-->
                             </div>
                         </li>
                         <!--/.TODO : FOREACH-->
-                        
+                        @endforeach
                     </ul>
                 </div>
             </div>

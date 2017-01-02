@@ -73,3 +73,6 @@ Route::get('/genreList', 'GenreController@getTousLesGenres');
 
 // Liste episodes (du plus récent au plus ancien)
 Route::get('/recentEpisodes', 'EpisodeController@getTousLesEpisodesPaginate');
+
+// Connexion
+Route::post('/login', 'UserController@SignIn');

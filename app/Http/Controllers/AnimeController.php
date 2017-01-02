@@ -8,8 +8,10 @@ use App\metier\Genre;
 use App\metier\Studio;
 use App\metier\Episode;
 use App\metier\Appartenance;
+use App\metier\User;
 use Illuminate\Support\Facades\Session;
 use Exception;
+
 
 class AnimeController extends Controller {
 
@@ -137,9 +139,11 @@ class AnimeController extends Controller {
         $unAnime = new Anime();
         $unStudio = new Studio();
         $unGenre = new Genre();
+        $unEpisode = new Episode();
         $unAnime = $unAnime->getAnimeById($idAnime);
         $unStudio = $unStudio->getStudioById($unAnime->NUMSTUDIO);
         $mesGenres = $unGenre->getGenreByAnime($idAnime);
-        return view('pageAnime', compact('unAnime', 'unStudio', 'mesGenres'));
+        $mesEpisodes = $unEpisode->getEpisodesByIdAnime($idAnime);
+        return view('pageAnime', compact('unAnime', 'unStudio', 'mesGenres', 'mesEpisodes'));
     }
     }

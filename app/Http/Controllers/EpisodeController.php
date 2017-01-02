@@ -8,6 +8,7 @@ use App\metier\Genre;
 use App\metier\Studio;
 use App\metier\Episode;
 use App\metier\Appartenance;
+use App\metier\User;
 use Illuminate\Support\Facades\Session;
 use Exception;
 
