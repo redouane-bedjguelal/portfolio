@@ -125,7 +125,7 @@ body {
     transition:.5s;
 }
 .anime-list {
-    background-size: 100%;
+    background-size: cover;
     width: 100%;
     height: 297px;
     display: inline-block;
@@ -151,13 +151,13 @@ body {
     transition:.5s;
 }
 .episode-list {
-    background-size: 100%;
+    background-size: cover;
     width: 100%;
     height: 140px;
     display: inline-block;
 }
 .episode-list-2 {
-    background-size: 100%;
+    background-size: cover;
     width: 100%;
     height: 120px;
     display: inline-block;
