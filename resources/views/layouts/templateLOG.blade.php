@@ -36,17 +36,17 @@
                     <!--Collapse content-->
                     <div class="collapse navbar-toggleable-xs" id="collapseEx">
                         <!--Navbar Brand-->
-                        <a class="navbar-brand" href="welcome"><span class="font-teal">ononani</span><span class="font-pink">.</span><span class="font-teal">me</span></a>
+                        <a class="navbar-brand" href="{{ url('welcome') }}"><span class="font-teal">ononani</span><span class="font-pink">.</span><span class="font-teal">me</span></a>
                         <!--Links-->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="recentEpisodes">RECENT EPISODES</a>
+                                <a class="nav-link" href="{{ url('recentEpisodes') }}">RECENT EPISODES</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="animeList">ANIME LIST</a>
+                                <a class="nav-link" href="{{ url('animeList') }}">ANIME LIST</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="genreList">GENRE LIST</a>
+                                <a class="nav-link" href="{{ url('genreList') }}">GENRE LIST</a>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav" style="float: right;">

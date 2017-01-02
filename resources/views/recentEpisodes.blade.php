@@ -26,7 +26,7 @@
                         @foreach ($mesAnime as $ligne2)
                         @if ($ligne->NUMANIME === $ligne2->NUMANIME)
                         <div class="view overlay hm-teal-strong episode-list" style="background-image: url('{{ $ligne2->IMGANIME }}');">
-                            <a href="#!">
+                            <a href="{{ url('anime/' . $ligne->NUMANIME) . '/' . $ligne->NUMEPISODE}}">
                                 <div class="mask">
                                     <i class="fa fa-play-circle play-button"></i>
                                 </div>
@@ -35,7 +35,7 @@
                         <!--/.episode-block-->
                         <!--episode-block-title-->
 
-                        <a href="#!" title="{{ $ligne2->NOMANIME }}">
+                        <a href="{{ url('anime/' . $ligne->NUMANIME) }}" title="{{ $ligne2->NOMANIME }}">
                             <div style="float: left; width: 80%;">
                                 <p class="episode-name">{{ $ligne2->NOMANIME }}</p>
                             </div>

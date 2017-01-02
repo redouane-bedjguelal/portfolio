@@ -41,4 +41,14 @@ class Episode extends Model
                 ->get();
         return $lesEpisodes;
     }
+    
+    // Fonction récupérant un épisode par NUMANIME et NUMEPISODE
+    public function getEpisodeByIds($idAnime, $idEpisode){
+        // Dialogue avec la BDD
+        $unEpisode = DB::table('episode')
+                ->where('NUMEPISODE', $idEpisode)
+                ->where('NUMANIME', $idAnime)
+                ->first();
+        return $unEpisode;
+    }
 }

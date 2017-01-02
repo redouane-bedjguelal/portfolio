@@ -24,14 +24,14 @@ Route::get('/animeListSimple', 'AnimeController@getTousLesAnime');
 // Redirection vers le formulaire de modification d'un anime
 Route::get('/modifierAnime/{id}', ['uses' => 'AnimeController@updateAnime']);
 
-// Redirection vers le formulaire de modification d'un anime
-Route::get('/anime/{id}', ['uses' => 'AnimeController@showAnime']);
-
-// Redirection vers le formulaire de modification d'un anime
+// Redirection vers la page de l'anime (avec l'id)
 Route::get('/anime/{id}', ['uses' => 'AnimeController@showAnime']);
 
 // Validation d'un ajout/modification et retour à la liste des anime
 Route::post('/validerAnime', 'AnimeController@validateAnime');
+
+// Redirection vers la page de l'épisode (avec les id anime/episode)
+Route::get('/anime/{idAnime}/{idEpisode}', ['uses' => 'EpisodeController@showEpisode']);
 
 Route::get('/pageMenu', function() {
     return view('pageMenu');

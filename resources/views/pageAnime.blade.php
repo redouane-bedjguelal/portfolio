@@ -1,6 +1,6 @@
 @extends('layouts.templateLOG')
 @section('content')
-<title> - ononani.me</title>
+<title>{{$unAnime->NOMANIME}} - ononani.me</title>
 <main>
     <!--Main layout-->
     <div class="container" style="padding-top: 100px;">
@@ -68,7 +68,7 @@
                             <div class="col-lg-4 col-md-6 episode-grid">
                                 <!--episode-block-->
                                 <div class="view overlay hm-teal-strong episode-list-2" style="background-image: url('{{$unAnime->IMGANIME}}');">
-                                    <a href="../episodeQCQ">
+                                    <a href="{{url('anime/' . $unAnime->NUMANIME . '/' . $unEp->NUMEPISODE)}}">
                                         <div class="mask">
                                             <i class="fa fa-play-circle play-button"></i>
                                         </div>
@@ -76,7 +76,7 @@
                                 </div>
                                 <!--/.episode-block-->
                                 <!--episode-block-title-->
-                                <a href="../episodeQCQ" title="{{$unEp->NOMEPISODE}}">
+                                <a href="{{url('anime/' . $unAnime->NUMANIME . '/' . $unEp->NUMEPISODE)}}" title="{{$unEp->NOMEPISODE}}">
                                     <div style="float: left; width: 80%;">
                                         <p class="episode-name">{{$unEp->NOMEPISODE}}</p>
                                     </div>
