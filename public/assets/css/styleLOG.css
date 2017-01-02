@@ -291,3 +291,21 @@ a .genre-link:hover {
     color: #fff;
     border-color: #00A0A0;
 }
+
+/* user */
+.square {
+    width: 100%;
+    border: 1px solid #fff;
+    padding-bottom: 100%;
+    background-size: cover;
+}
+.square:after {
+    content: "";
+    display: block;
+}
+.anime-list-user {
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 150%;
+    display: inline-block;
+}

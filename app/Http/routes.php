@@ -19,10 +19,13 @@ Route::get('/', function () { return view('pageMenu'); });
 Route::get('/ajouterAnime', 'AnimeController@addAnime');
 
 // Redirection vers la liste des anime
-Route::get('/listerAnime', 'AnimeController@getTousLesAnime');
+Route::get('/animeListSimple', 'AnimeController@getTousLesAnime');
 
 // Redirection vers le formulaire de modification d'un anime
 Route::get('/modifierAnime/{id}', ['uses' => 'AnimeController@updateAnime']);
+
+// Redirection vers le formulaire de modification d'un anime
+Route::get('/anime/{id}', ['uses' => 'AnimeController@showAnime']);
 
 // Validation d'un ajout/modification et retour à la liste des anime
 Route::post('/validerAnime', 'AnimeController@validateAnime');
@@ -52,6 +55,11 @@ Route::get('/animeQCQ', function() {
 // Page épisode
 Route::get('/episodeQCQ', function() {
     return view('pageEpisode');
+});
+
+// Page épisode
+Route::get('/userQCQ', function() {
+    return view('pageUser');
 });
 
 // Liste anime

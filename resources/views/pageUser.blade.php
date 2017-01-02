@@ -1,92 +1,108 @@
 @extends('layouts.templateLOG')
 @section('content')
-<title> - ononani.me</title>
+<title><!--LOGINUSER-->'s page - ononani.me</title>
 <main>
     <!--Main layout-->
-    <div class="container" style="padding-top: 100px;">
+    <div class="container anime-content" style="min-height: 500px;">
         <div class="row">
-            <!--Left row-->
-            <div class="col-lg-4 col-md-5" style="margin-bottom: 20px;">
-                <img style="width: 100%; border-radius: 0; margin-bottom: 20px;" src="http://cdn.masterani.me/poster/2275GWxGpFo0.jpg" alt="anime-img">
-                <div class="anime-infos font-aaa ">
-                    <span class="unselectable">episodes</span>
-                    <span class="anime-infos-right font-white">aaa</span>
-                </div>
-                <div class="anime-infos font-aaa">
-                    <span class="unselectable">studio</span>
-                    <span class="anime-infos-right font-white">bbb</span>
-                </div>
-                <div class="anime-infos font-aaa">
-                    <span class="unselectable">aired</span>
-                    <!--TODO : SAISON + ANNEE-->
-                    <span class="anime-infos-right font-white">ccc</span>
-                </div>
-                <div class="anime-infos font-aaa">
-                    <span class="unselectable">status</span>
-                    <!--TODO : IF BOOL-->
-                    <span class="anime-infos-right font-white">ddd</span>
-                </div>
-                <div class="anime-infos font-aaa">
-                    <span class="unselectable">rating</span>
-                    <!--TODO : RATING SYSTEM-->
-                    <span class="anime-infos-right font-white">
-                        <i class="fa fa-star teal-text unselectable"></i>
-                        eee
-                    </span>
-                </div>
-            </div>
-            <!--/.Left row-->
-            <!--Right row-->
-            <div class="col-lg-8 col-md-7" style="padding-top: 19px;">
+            <div class="col-sm-3">
                 <div class="anime-title font-white">
-                    Masamune-kun no Revenge
+                    LoginUser
                 </div>
-                <div class="font-aaa">
-                    <ul class="anime-genres unselectable">
-                        <!--TODO : FOREACH + RECHERCHE PAR GENRE-->
-                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">Genre1</a></li>
-                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">Genre2</a></li>
-                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">Genre3</a></li>
-                    </ul>
+                <hr>
+                <div class="col-sm-3 square" style="background-image: url('http://www.guide-du-chien.com/wp-content/uploads/2016/06/top-10-grand-chien.jpg');"></div>
+                <hr>
+            </div>
+            <!--anime-row-->
+            <div class="col-sm-9">
+                <div class="col-xs-12 anime-title font-white">
+                    Liked
+                    <hr>
                 </div>
-                <div class="anime-synopsis font-aaa" style="margin-bottom: 20px;">
-                    <!--TODO : ADD SYNOPSIS-->
-                    Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum parum congrueret, eum ad rabiem potius evibrabat, Augustum actus eius exaggerando creberrime docens, idque, incertum qua mente, ne lateret adfectans. quibus mox Caesar acrius efferatus, velut contumaciae quoddam vexillum altius erigens, sine respectu salutis alienae vel suae ad vertenda opposita instar rapidi fluminis irrevocabili impetu ferebatur.
-                </div>
-                <!--Episodes-->
-                <div class="row" style="margin-bottom: 20px;">
-                    <ul id="episode-list">
+                <div>
+                    <ul id="anime-list">
 
-                        <!--TODO : FOREACH-->
                         <li>
-                            <div class="col-lg-4 col-md-6 episode-grid">
-                                <!--episode-block-->
-                                <div class="view overlay hm-teal-strong episode-list-2" style="background-image: url('http://cdn.masterani.me/poster/2275GWxGpFo0.jpg');">
+                            <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
+                                <!--anime-block-->
+                                <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('https://myanimelist.cdn-dena.com/images/anime/2/83188.webp');">
                                     <a href="#!">
-                                        <div class="mask">
-                                            <i class="fa fa-play-circle play-button"></i>
+                                        <div class="mask flex-center">
+                                            <!--anime-block-title-->
+                                            <p class="white-text">Masamune-kun no Revenge</p>
+                                            <!--/.anime-block-title-->
                                         </div>
                                     </a>
                                 </div>
-                                <!--/.episode-block-->
-                                <!--episode-block-title-->
-                                <a href="#!" title="Buta"><!--TODO : NOM EP-->
-                                    <div style="float: left; width: 80%;">
-                                        <p class="episode-name">Buta</p><!--TODO : NOM EP-->
-                                    </div>
-                                </a>
-                                <div style="float: right;">
-                                    <p class="episode-number">Ep. 1</p>
-                                </div>
-                                <!--/.episode-block-title-->
+                                <!--/.anime-block-->
                             </div>
                         </li>
-                        <!--/.TODO : FOREACH-->
-                        
+
+                        <li>
+                            <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
+                                <!--anime-block-->
+                                <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('https://myanimelist.cdn-dena.com/images/anime/2/83188.webp');">
+                                    <a href="#!">
+                                        <div class="mask flex-center">
+                                            <!--anime-block-title-->
+                                            <p class="white-text">Masamune-kun no Revenge</p>
+                                            <!--/.anime-block-title-->
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--/.anime-block-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
+                                <!--anime-block-->
+                                <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('https://myanimelist.cdn-dena.com/images/anime/2/83188.webp');">
+                                    <a href="#!">
+                                        <div class="mask flex-center">
+                                            <!--anime-block-title-->
+                                            <p class="white-text">Masamune-kun no Revenge</p>
+                                            <!--/.anime-block-title-->
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--/.anime-block-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
+                                <!--anime-block-->
+                                <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('https://myanimelist.cdn-dena.com/images/anime/2/83188.webp');">
+                                    <a href="#!">
+                                        <div class="mask flex-center">
+                                            <!--anime-block-title-->
+                                            <p class="white-text">Masamune-kun no Revenge</p>
+                                            <!--/.anime-block-title-->
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--/.anime-block-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
+                                <!--anime-block-->
+                                <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('https://myanimelist.cdn-dena.com/images/anime/2/83188.webp');">
+                                    <a href="#!">
+                                        <div class="mask flex-center">
+                                            <!--anime-block-title-->
+                                            <p class="white-text">Masamune-kun no Revenge</p>
+                                            <!--/.anime-block-title-->
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--/.anime-block-->
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
             </div>
-            <!--/.Right row-->
+            <!--/.anime-row-->
         </div>
     </div>
     <!--/.Main layout-->
