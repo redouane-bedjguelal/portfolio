@@ -19,7 +19,7 @@ Route::get('/', function () { return view('pageMenu'); });
 Route::get('/ajouterAnime', 'AnimeController@addAnime');
 
 // Redirection vers la liste des anime
-Route::get('/animeList', 'AnimeController@getTousLesAnime');
+Route::get('/animeListSimple', 'AnimeController@getTousLesAnime');
 
 // Redirection vers le formulaire de modification d'un anime
 Route::get('/modifierAnime/{id}', ['uses' => 'AnimeController@updateAnime']);

@@ -6,14 +6,14 @@
         <div class="row">
             <!--Left row-->
             <div class="col-lg-4 col-md-5" style="margin-bottom: 20px;">
-                <img style="width: 100%; border-radius: 0; margin-bottom: 20px;" src="http://cdn.masterani.me/poster/2275GWxGpFo0.jpg" alt="anime-img">
+                <img style="width: 100%; border-radius: 0; margin-bottom: 20px;" src="{{$unAnime->IMGANIME}}" alt="anime-img">
                 <div class="anime-infos font-aaa ">
                     <span class="unselectable">episodes</span>
-                    <span class="anime-infos-right font-white">aaa</span>
+                    <span class="anime-infos-right font-white">{{$unAnime->NBEPISODES}}</span>
                 </div>
                 <div class="anime-infos font-aaa">
                     <span class="unselectable">studio</span>
-                    <span class="anime-infos-right font-white">bbb</span>
+                    <span class="anime-infos-right font-white">{{$unStudio->NOMSTUDIO}}</span>
                 </div>
                 <div class="anime-infos font-aaa">
                     <span class="unselectable">aired</span>
@@ -38,14 +38,18 @@
             <!--Right row-->
             <div class="col-lg-8 col-md-7" style="padding-top: 19px;">
                 <div class="anime-title font-white">
-                    Masamune-kun no Revenge
+                    {{$unAnime->NOMANIME}}
                 </div>
                 <div class="font-aaa">
                     <ul class="anime-genres unselectable">
                         <!--TODO : FOREACH + RECHERCHE PAR GENRE-->
-                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">Genre1</a></li>
-                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">Genre2</a></li>
-                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">Genre3</a></li>
+                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">{{$mesGenres[0]}}</a></li>
+                        @if($mesGenres[1]!='')
+                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">{{$mesGenres[1]}}</a></li>
+                        @endif
+                        @if($mesGenres[2]!='')
+                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">{{$mesGenres[2]}}</a></li>
+                        @endif
                     </ul>
                 </div>
                 <div class="anime-synopsis font-aaa" style="margin-bottom: 20px;">

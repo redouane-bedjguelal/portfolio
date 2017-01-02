@@ -67,4 +67,14 @@ class Appartenance extends Model
                 ->where([['NUMANIME', $idAnime], ['NUMGENRE', $idGenre]])
                 ->update(['NUMANIME' => $idAnime, 'NUMGENRE' => $idGenre]);
     }
+    
+    // Fonction récupérant le nombre d'appartenances d'un anime
+    public function getNombreAppartenancesById($idAnime){
+        // Dialogue avec la BDD
+        $nbApp = DB::table('appartenir')
+                ->groupBy('NUMANIME')
+                ->having('NUMANIME', '=', $idAnime)
+                ->count();
+        return $nbApp;
+    }
 }

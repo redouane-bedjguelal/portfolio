@@ -63,17 +63,17 @@ class Anime extends Model
     }
     
     // Fonction d'ajout d'un anime dans la base
-    public function addAnime($nomAnime, $annee, $saison, $nbep, $fini, $studio, $resume){
+    public function addAnime($nomAnime, $annee, $saison, $nbep, $fini, $studio, $resume, $image){
         // Dialogue avec la BDD
         DB::table('anime')
-                ->insert(['NOMANIME' => $nomAnime, 'NUMSTUDIO' => $studio, 'SAISONANIME' => $saison, 'ANNEEANIME' => $annee, 'NBEPISODES' => $nbep, 'RESUME' => $resume, 'ESTFINI' => $fini]);
+                ->insert(['NOMANIME' => $nomAnime, 'NUMSTUDIO' => $studio, 'SAISONANIME' => $saison, 'ANNEEANIME' => $annee, 'NBEPISODES' => $nbep, 'RESUME' => $resume, 'ESTFINI' => $fini, 'IMGANIME' => $image]);
     }
     
     // Fonction de modification d'un anime dans la BDD
-    public function editAnime($idAnime, $studio, $nomAnime, $annee, $saison, $nbep, $fini, $resume){
+    public function editAnime($idAnime, $studio, $nomAnime, $annee, $saison, $nbep, $fini, $resume, $image){
         // Dialogue avec la BDD
         DB::table('anime')
                 ->where('NUMANIME', $idAnime)
-                ->update(['NOMANIME' => $nomAnime, 'NUMSTUDIO' => $studio, 'SAISONANIME' => $saison, 'ANNEEANIME' => $annee, 'NBEPISODES' => $nbep, 'RESUME' => $resume, 'ESTFINI' => $fini]);
+                ->update(['NOMANIME' => $nomAnime, 'NUMSTUDIO' => $studio, 'SAISONANIME' => $saison, 'ANNEEANIME' => $annee, 'NBEPISODES' => $nbep, 'RESUME' => $resume, 'ESTFINI' => $fini, 'IMGANIME' => $image]);
     }
 }

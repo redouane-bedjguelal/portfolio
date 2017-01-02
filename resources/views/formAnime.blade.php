@@ -103,7 +103,13 @@
                     </div>
                  </div>   
                 -->
-
+                
+                <div class="form-group">
+                    <label class="col-md-3 col-sm-3 control-label">Cover : </label>
+                    <div class="col-md-3 col-sm-3">
+                        <input type="text" name="image" value="{{$unAnime->IMGANIME or ''}}" class="form-control" placeholder="Cover URL" required>
+                    </div>
+                </div>
 
 
                 <div class="form-group">

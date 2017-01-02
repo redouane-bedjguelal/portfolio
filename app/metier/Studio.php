@@ -29,4 +29,13 @@ class Studio extends Model
                 ->get();
         return $lesStudios;
     }
+    
+    // Fonction récupérant un studio par l'id
+    public function getStudioById($idStudio){
+        // Dialogue avec la BDD
+        $unStudio = DB::table('studio')
+                ->where('NUMSTUDIO', $idStudio)
+                ->first();
+        return $unStudio;
+    }
 }

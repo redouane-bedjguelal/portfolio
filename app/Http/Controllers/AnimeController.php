@@ -51,11 +51,12 @@ class AnimeController extends Controller {
         $genre1 = Request::input('genre1');
         $genre2 = Request::input('genre2');
         $genre3 = Request::input('genre3');
+        $image = Request::input('image');
         $unAnime = new Anime();
         $uneAppartenance = new Appartenance();
         // Modification d'un anime
         if ($idAnime > 0) {
-            $unAnime->editAnime($idAnime, $studio, $nomAnime, $annee, $saison, $nbep, $fini, $resume);
+            $unAnime->editAnime($idAnime, $studio, $nomAnime, $annee, $saison, $nbep, $fini, $resume, $image);
             // Modification de l'appartenance => TO DO
             if ($uneAppartenance->getUneAppartenance($idAnime, $genre1) != null) {
                 $uneAppartenance->editAppartenance($idAnime, $genre1);
@@ -87,10 +88,10 @@ class AnimeController extends Controller {
                     $uneAppartenance->addAppartenance($idAnime, $genre3);
                 }
             }
-
+        }
             // Ajout d'un anime
             else {
-                $unAnime->addAnime($nomAnime, $annee, $saison, $nbep, $fini, $studio, $resume);
+                $unAnime->addAnime($nomAnime, $annee, $saison, $nbep, $fini, $studio, $resume, $image);
                 $uneAppartenance->addAppartenanceNom($nomAnime, $genre1);
                 // Création d'une appartenance si le genre 2 est défini et différent du genre 1
                 if ($genre2 > 0 && $genre2 != $genre1) {
@@ -101,9 +102,8 @@ class AnimeController extends Controller {
                     $uneAppartenance->addAppartenanceNom($nomAnime, $genre3);
                 }
             }
-            return redirect('/listerAnime');
+            return redirect('/animeList');
         }
-    }
 
     // Modification d'un anime
     public function updateAnime($idAnime) {
@@ -131,4 +131,15 @@ class AnimeController extends Controller {
         // On affiche la liste
         return view('animeList', compact('mesAnime'));
     }
-}
+    
+    // Fonction récupérant les informations d'un anime et l'affichant
+    public function showAnime($idAnime){
+        $unAnime = new Anime();
+        $unStudio = new Studio();
+        $unGenre = new Genre();
+        $unAnime = $unAnime->getAnimeById($idAnime);
+        $unStudio = $unStudio->getStudioById($unAnime->NUMSTUDIO);
+        $mesGenres = $unGenre->getGenreByAnime($idAnime);
+        return view('pageAnime', compact('unAnime', 'unStudio', 'mesGenres'));
+    }
+    }
