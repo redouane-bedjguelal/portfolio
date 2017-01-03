@@ -3,19 +3,44 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/resources/views/anime.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/app/Http/routes.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/app/Http/Controllers/UserController.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/app/User.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/resources/views/pageAnime.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/app/Http/Controllers/AnimeController.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/resources/views/layouts/templateLOG.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/resources/views/accueilDC.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/resources/views/formAnime.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/app/metier/User.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/resources/views/accueilLOG.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/resources/views/layouts/templateDC.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Projet-ononani.me/resources/views/pageUser.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/pageMenu.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/pageUser.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/app/metier/Anime.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/storage/framework/views/3fce97f930cd295de41a599870731fa4dfecc9dd.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/app/metier/Episode.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/app/Http/Controllers/AnimeController.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/pageEpisode.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/accueilDC.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/app/Http/Controllers/UserController.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/listerAnime.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/anime.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/public/assets/css/styleDC.css</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/app/Http/Controllers/EpisodeController.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/pageAnime.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/app/metier/Appartenance.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/storage/framework/views/7e2b0c7d6f3b2408e179959a7924369a0b34d35a.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/modifierAdherent.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/app/metier/Genre.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/ononanime-db.sql</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/routes.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/layouts/pagination.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/aboutus.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/config/view.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/genreList.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/accueilLOG.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/recentEpisodes.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/layouts/templateLOG.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/app/Http/Controllers/GenreController.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/animeList.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/layouts/templateDC.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/app/metier/Studio.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/app/Http/Controllers/Controller.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/resources/views/formAnime.blade.php</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/package.json</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/.env</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/composer.json</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/public/assets/css/styleLOG.css</file>
+            <file>file:/C:/xampp/htdocs/ononanime/Projet-ononani.me/app/Http/routes.php</file>
         </group>
     </open-files>
 </project-private>

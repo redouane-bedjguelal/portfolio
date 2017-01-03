@@ -20,7 +20,7 @@
         <!--genre-row-->
         <div class="row">
             @foreach ($mesGenres as $ligne)
-            <a href="genreList/{{ $ligne->NUMGENRE }}">
+            <a href="{{url('animeList/' . $ligne->NUMGENRE) }}">
                 <div class="col-sm-3 col-xs-6 genre-link">
                     {{ $ligne->LIBELLEGENRE }}
                 </div>

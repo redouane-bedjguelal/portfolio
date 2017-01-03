@@ -11,7 +11,7 @@ use App\metier\Appartenance;
 use App\metier\User;
 use Illuminate\Support\Facades\Session;
 use Exception;
-
+use View;
 
 class AnimeController extends Controller {
 
@@ -91,21 +91,21 @@ class AnimeController extends Controller {
                 }
             }
         }
-            // Ajout d'un anime
-            else {
-                $unAnime->addAnime($nomAnime, $annee, $saison, $nbep, $fini, $studio, $resume, $image);
-                $uneAppartenance->addAppartenanceNom($nomAnime, $genre1);
-                // Création d'une appartenance si le genre 2 est défini et différent du genre 1
-                if ($genre2 > 0 && $genre2 != $genre1) {
-                    $uneAppartenance->addAppartenanceNom($nomAnime, $genre2);
-                }
-                // Création d'une appartenance si le genre 3 est défini et différent des genres 2 et 3
-                if ($genre3 > 0 && $genre3 != $genre2 && $genre3 != $genre1) {
-                    $uneAppartenance->addAppartenanceNom($nomAnime, $genre3);
-                }
+        // Ajout d'un anime
+        else {
+            $unAnime->addAnime($nomAnime, $annee, $saison, $nbep, $fini, $studio, $resume, $image);
+            $uneAppartenance->addAppartenanceNom($nomAnime, $genre1);
+            // Création d'une appartenance si le genre 2 est défini et différent du genre 1
+            if ($genre2 > 0 && $genre2 != $genre1) {
+                $uneAppartenance->addAppartenanceNom($nomAnime, $genre2);
             }
-            return redirect('/animeList');
+            // Création d'une appartenance si le genre 3 est défini et différent des genres 2 et 3
+            if ($genre3 > 0 && $genre3 != $genre2 && $genre3 != $genre1) {
+                $uneAppartenance->addAppartenanceNom($nomAnime, $genre3);
+            }
         }
+        return redirect('/animeList');
+    }
 
     // Modification d'un anime
     public function updateAnime($idAnime) {
@@ -124,7 +124,7 @@ class AnimeController extends Controller {
 
         return view('formAnime', compact('unAnime', 'mesAppartenances', 'mesGenres', 'mesStudios'));
     }
-    
+
     // Fonction récupérant tous les anime (+ pagination)
     public function getTousLesAnimePaginate() {
         // Appel de la méthode de la classe métier Anime
@@ -133,9 +133,9 @@ class AnimeController extends Controller {
         // On affiche la liste
         return view('animeList', compact('mesAnime'));
     }
-    
+
     // Fonction récupérant les informations d'un anime et l'affichant
-    public function showAnime($idAnime){
+    public function showAnime($idAnime) {
         $unAnime = new Anime();
         $unStudio = new Studio();
         $unGenre = new Genre();
@@ -144,6 +144,23 @@ class AnimeController extends Controller {
         $unStudio = $unStudio->getStudioById($unAnime->NUMSTUDIO);
         $mesGenres = $unGenre->getGenreByAnime($idAnime);
         $mesEpisodes = $unEpisode->getEpisodesByIdAnime($idAnime);
-        return view('pageAnime', compact('unAnime', 'unStudio', 'mesGenres', 'mesEpisodes'));
+        $mesGenres2 = $unGenre->getGenre();
+        return view('pageAnime', compact('unAnime', 'unStudio', 'mesGenres', 'mesEpisodes', 'mesGenres2'));
     }
+
+    // Fonction récupérant tous les anime par genre
+    public function getTousLesAnimeParGenre($idGenre) {
+        $mesAnime = Anime::orderBy('NOMANIME')->paginate(12);
+        $uneAppartenance = new Appartenance();
+        $mesAppartenances = $uneAppartenance->getLesAppartenancesGenre($idGenre);
+        $unGenre = new Genre();
+        $mesGenres = $unGenre->getGenre();
+        return View::make('animeListGenre', [
+                    'idGenre' => $idGenre,
+                    'mesAnime' => $mesAnime,
+                    'mesAppartenances' => $mesAppartenances,
+                    'mesGenres' => $mesGenres
+        ]);
     }
+
+}
