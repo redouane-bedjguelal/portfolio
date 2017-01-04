@@ -60,6 +60,10 @@ Route::get('/animeList', 'AnimeController@getTousLesAnimePaginate');
 Route::get('/animeList/{idGenre}', ['uses' => 'AnimeController@getTousLesAnimeParGenre']);
 
 
+// Lste anime par genre
+Route::get('/animeList/{idGenre}', ['uses' => 'AnimeController@getTousLesAnimeParGenre']);
+
+
 // Liste genres
 Route::get('/genreList', 'GenreController@getTousLesGenres');
 
