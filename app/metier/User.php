@@ -76,7 +76,13 @@ class User extends Model
     // Fonction ajoutant un utilisateur dans la base de données
     public function addUser($login, $pwd){
         //Dialogue avec la BDD
+        
+        //Récupération de l'ID user le plus élevé
+        $id = DB::table('utilisateur')
+                ->max('IDUSER');
+        $id+=1;
+        //Ajout de l'utilisateur dans la base
         DB::table('utilisateur')
-                ->insert(['LOGINUSER' => $login, 'PWDUSER' =>$pwd]);
+                ->insert(['LOGINUSER' => $login, 'PWDUSER' =>$pwd, 'IDUSER' => $id]);
     }
 }

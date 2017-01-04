@@ -86,5 +86,5 @@ Route::get('/signOut', 'UserController@signOut');
 // Affichage de la page perso de l'utilisateur
 Route::get('/userPage/{id}', ['uses' => 'UserController@showUser']);
 
-// Appel de la page perso de l'utilisateur
-Route::get('/userPage', 'UserController@getCurrentUser');
+// Appel de la fonction d'ajout un like
+Route::get('/like/{login}/{id}');

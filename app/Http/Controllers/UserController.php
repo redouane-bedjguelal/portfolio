@@ -9,8 +9,10 @@ use App\metier\Studio;
 use App\metier\Episode;
 use App\metier\Appartenance;
 use App\metier\User;
+use App\metier\Aimer;
 use Illuminate\Support\Facades\Session;
 use Exception;
+use App\Http\Controllers\Redirect;
 
 class UserController extends Controller
 {
@@ -71,15 +73,11 @@ class UserController extends Controller
     }
     
     // Fonction récupérant les informations d'un utilisateur
-    public function showUser($idUser){
+    public function showUser($login){
         $user = new User();
-        $user = $user->getUserByName($idUser);
-        return view('pageUser.id', compact('user'));
-    }
-    
-    // Fonction récupérant l'ID d'un utilisateur via la session
-    public function getCurrentUser(){
-        $id = Auth::user()->name;
-        return view('pageUser', compact('id'));
+        $like = new Aimer();
+        $user = $user->getUserByName($login);
+        $like = $like->getLikeByUser($login);
+        return view('pageUser', compact('user', 'like'));
     }
 }

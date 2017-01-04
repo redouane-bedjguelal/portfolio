@@ -21,15 +21,16 @@
                 </div>
                 <div>
                     <ul id="anime-list">
-
+                        @if(count($like)>0)
+                        @foreach ($like as $anime)
                         <li>
                             <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
                                 <!--anime-block-->
-                                <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('https://myanimelist.cdn-dena.com/images/anime/2/83188.webp');">
-                                    <a href="#!">
+                                <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('{{$anime->IMGANIME}}');">
+                                    <a href="{{ url('anime/' . $ligne->NUMANIME) }}">
                                         <div class="mask flex-center">
                                             <!--anime-block-title-->
-                                            <p class="white-text">Masamune-kun no Revenge</p>
+                                            <p class="white-text">{{$anime->NOMANIME}}</p>
                                             <!--/.anime-block-title-->
                                         </div>
                                     </a>
@@ -37,68 +38,8 @@
                                 <!--/.anime-block-->
                             </div>
                         </li>
-
-                        <li>
-                            <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
-                                <!--anime-block-->
-                                <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('https://myanimelist.cdn-dena.com/images/anime/2/83188.webp');">
-                                    <a href="#!">
-                                        <div class="mask flex-center">
-                                            <!--anime-block-title-->
-                                            <p class="white-text">Masamune-kun no Revenge</p>
-                                            <!--/.anime-block-title-->
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/.anime-block-->
-                            </div>
-                        </li>
-                        <li>
-                            <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
-                                <!--anime-block-->
-                                <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('https://myanimelist.cdn-dena.com/images/anime/2/83188.webp');">
-                                    <a href="#!">
-                                        <div class="mask flex-center">
-                                            <!--anime-block-title-->
-                                            <p class="white-text">Masamune-kun no Revenge</p>
-                                            <!--/.anime-block-title-->
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/.anime-block-->
-                            </div>
-                        </li>
-                        <li>
-                            <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
-                                <!--anime-block-->
-                                <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('https://myanimelist.cdn-dena.com/images/anime/2/83188.webp');">
-                                    <a href="#!">
-                                        <div class="mask flex-center">
-                                            <!--anime-block-title-->
-                                            <p class="white-text">Masamune-kun no Revenge</p>
-                                            <!--/.anime-block-title-->
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/.anime-block-->
-                            </div>
-                        </li>
-                        <li>
-                            <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
-                                <!--anime-block-->
-                                <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('https://myanimelist.cdn-dena.com/images/anime/2/83188.webp');">
-                                    <a href="#!">
-                                        <div class="mask flex-center">
-                                            <!--anime-block-title-->
-                                            <p class="white-text">Masamune-kun no Revenge</p>
-                                            <!--/.anime-block-title-->
-                                        </div>
-                                    </a>
-                                </div>
-                                <!--/.anime-block-->
-                            </div>
-                        </li>
-
+                        @endforeach
+                        @endif
                     </ul>
                 </div>
             </div>
