@@ -43,5 +43,27 @@ class EpisodeController extends Controller {
             'mesEpisodes' => $mesEpisodes
         ]);
     }
+    
+    // Fonction ajoutant un épisode
+    public function addEpisode() {
+        $idAnime=Request::input('idAnime');
+        $idEpisode=Request::input('idEpisode');
+        $nom=Request::input('nom');
+        $idVideo=Request::input('idVideo');
+        $episode = new Episode();
+        $episode->addEpisode($idAnime, $idEpisode, $nom, $idVideo);
+        return redirect('/recentEpisodes');
+    }
 
+    // Fonction d'affichage du formulaire d'ajout d'un épisode
+    public function formEpisode(){
+        // Déclaration des variables
+        $unAnime = new Anime();
+        
+        // Appel des méthodes des classes métiers
+        $mesAnime = $unAnime->getAnime();
+        
+        // Redirection vers la page formAnime avec passages des genres et des studios
+        return view('formEpisode', compact('mesAnime'));
+    }
 }

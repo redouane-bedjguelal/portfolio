@@ -13,8 +13,6 @@
                 <div class="col-lg-8">
                     <p class="bq-title font-baumans display-3 teal-text" style="font-family: 'Baumans', cursive;">About us</p>
                     <p class="grey-text">This website is a school project made by Redouane Bedjguelal and Nicolas Kim, two TALENTED french IT students.
-                        <br>
-                        Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel Laravel 
                     </p>
                     <br>
                     <div class="container" style="text-align: center;">

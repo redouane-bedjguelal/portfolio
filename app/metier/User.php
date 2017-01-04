@@ -83,6 +83,7 @@ class User extends Model
         $id+=1;
         //Ajout de l'utilisateur dans la base
         DB::table('utilisateur')
-                ->insert(['LOGINUSER' => $login, 'PWDUSER' =>$pwd, 'IDUSER' => $id]);
+                ->insert(['LOGINUSER' => $login, 'PWDUSER' =>$pwd, 'IDUSER' => $id, 'AVATARUSER' => 'http://www.guide-du-chien.com/wp-content/uploads/2016/06/top-10-grand-chien-640x427.jpg',
+                    'STATUTUSER' => 0]);
     }
 }

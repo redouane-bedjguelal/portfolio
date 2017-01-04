@@ -27,7 +27,7 @@
                             <div class="col-lg-3 col-md-4 col-sm-6 anime-grid">
                                 <!--anime-block-->
                                 <div class="view overlay hm-teal-strong anime-list-user" style="background-image: url('{{$anime->IMGANIME}}');">
-                                    <a href="{{ url('anime/' . $ligne->NUMANIME) }}">
+                                    <a href="{{ url('anime/' . $anime->NUMANIME) }}">
                                         <div class="mask flex-center">
                                             <!--anime-block-title-->
                                             <p class="white-text">{{$anime->NOMANIME}}</p>

@@ -41,8 +41,11 @@ class Aimer extends Model
     
     // Fonction d'ajout d'un like dans la BDD
     public function addLike($login, $anime){
+        // Récupération de l'ID anime
+        $unAnime = new Anime();
+        $numAnime = $unAnime->getIdAnimeNom($anime);
         // Dialogue avec la BDD
         DB::table('aimer')
-                ->insert(['LOGINUSER' => $login, 'NUMANIME' => $anime]);
+                ->insert(['LOGINUSER' => $login, 'NUMANIME' => $numAnime]);
     }
 }

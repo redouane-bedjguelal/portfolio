@@ -29,11 +29,10 @@
                     </span>
                 </div>
                 <div class="anime-infos font-aaa">
-                    <span class="unselectable">rating</span>
+                    <span class="unselectable">like</span>
                     <!--TODO : RATING SYSTEM-->
                     <span class="anime-infos-right font-white">
-                        <i class="fa fa-star teal-text unselectable"></i>
-                        eee
+                        <a href="{{ url('like') }}/{{Session::get('id')}}/{{$unAnime->NOMANIME}}"<i class="fa fa-heart teal-text unselectable"></i></a>
                     </span>
                 </div>
             </div>
@@ -45,14 +44,21 @@
                 </div>
                 <div class="font-aaa">
                     <ul class="anime-genres unselectable">
-                        <!--TODO : RECHERCHE PAR GENRE-->
-                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">{{$mesGenres[0]}}</a></li>
+                        @foreach ($mesGenres2 as $ligne)
+                        @if ($ligne->LIBELLEGENRE == $mesGenres[0])
+                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="{{url('animeList/' . $ligne->NUMGENRE)}}">{{$mesGenres[0]}}</a></li>
+                        @endif
                         @if($mesGenres[1]!='')
-                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">{{$mesGenres[1]}}</a></li>
+                        @if ($ligne->LIBELLEGENRE == $mesGenres[1])
+                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="{{url('animeList/' . $ligne->NUMGENRE)}}">{{$mesGenres[1]}}</a></li>
+                        @endif
                         @endif
                         @if($mesGenres[2]!='')
-                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="">{{$mesGenres[2]}}</a></li>
+                        @if ($ligne->LIBELLEGENRE == $mesGenres[2])
+                        <li class="anime-genre"><a class="font-aaa anime-genre-link" href="{{url('animeList/' . $ligne->NUMGENRE)}}">{{$mesGenres[2]}}</a></li>
                         @endif
+                        @endif
+                        @endforeach
                     </ul>
                 </div>
                 <div class="anime-synopsis font-aaa" style="margin-bottom: 20px;">

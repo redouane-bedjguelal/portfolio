@@ -48,13 +48,24 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('genreList') }}">GENRE LIST</a>
                             </li>
+                        @if(Session::get('id')=='nunuz')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('ajouterAnime') }}">ADD ANIME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('animeListSimple') }}">EDIT ANIME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('ajouterEpisode') }}">ADD EPISODE</a>
+                            </li>
+                        @endif
                         </ul>
                         <ul class="nav navbar-nav" style="float: right;">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('userPage') }}/{{Session::get('id')}}"><i class="fa fa-user" aria-hidden="true"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="signOut"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                                <a class="nav-link" href="{{ url('signOut') }}"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
                             </li>
                         </ul>
                     </div>

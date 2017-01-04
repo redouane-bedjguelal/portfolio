@@ -51,4 +51,11 @@ class Episode extends Model
                 ->first();
         return $unEpisode;
     }
+    
+    // Fonction d'ajout d'un épisode
+    public function addEpisode($idAnime, $idEpisode, $nom, $idVideo){
+        // Dialogue avec la BDD
+        DB::table('episode')
+                ->insert(['NUMANIME' => $idAnime, 'NUMEPISODE' => $idEpisode, 'NOMEPISODE' => $nom, 'IDVIDEO' => $idVideo]);
+    }
 }

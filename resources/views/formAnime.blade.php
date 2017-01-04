@@ -91,19 +91,6 @@
                     </div>
 
                 </div>
-
-
-                <!--
-                <div class="form-group">
-                            <label class="col-md-3 col-sm-3 control-label">Couverture : </label>
-                    <div class="col-md-9 col-sm-9 ">
-                        <input type="hidden" name ="couverture" value="{{$unLivre->couverture or ''}}"/>
-                        <input type="hidden" name="MAX_FILE_SIZE" value="99999999" />
-                        <input name="couverture" type="file" class="btn btn-default pull-left"/>
-                    </div>
-                 </div>   
-                -->
-                
                 <div class="form-group">
                     <label class="col-md-3 col-sm-3 control-label">Cover : </label>
                     <div class="col-md-3 col-sm-3">

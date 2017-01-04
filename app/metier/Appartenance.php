@@ -48,6 +48,16 @@ class Appartenance extends Model
         return $mesAppartenances;
     }
     
+    // Fonction renvoyant toutes les appartenances pour un genre
+    public function getLesAppartenancesGenre($idGenre){
+        // Dialogue avec la BDD
+        $mesAppartenances = DB::table('appartenir')
+                ->where('NUMGENRE', $idGenre)
+                ->select()
+                ->get();
+        return $mesAppartenances;
+    }
+    
     // Fonction ajoutant une appartenance à la base de données
     public function addAppartenance($numanime, $numgenre){
         DB::table('appartenir')

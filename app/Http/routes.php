@@ -50,23 +50,15 @@ Route::get('/welcome', function() {
     return view('accueilLOG');
 });
 
-// Page anime
-Route::get('/animeQCQ', function() {
-    return view('pageAnime');
-});
+// Redirection vers le formulaire d'ajout d'un anime
+Route::get('/ajouterEpisode', 'EpisodeController@formEpisode');
 
-// Page épisode
-Route::get('/episodeQCQ', function() {
-    return view('pageEpisode');
-});
-
-// Page épisode
-Route::get('/userQCQ', function() {
-    return view('pageUser');
-});
-
-// Liste anime
+// Liste anime  
 Route::get('/animeList', 'AnimeController@getTousLesAnimePaginate');
+
+// Lste anime par genre
+Route::get('/animeList/{idGenre}', ['uses' => 'AnimeController@getTousLesAnimeParGenre']);
+
 
 // Liste genres
 Route::get('/genreList', 'GenreController@getTousLesGenres');
@@ -87,4 +79,7 @@ Route::get('/signOut', 'UserController@signOut');
 Route::get('/userPage/{id}', ['uses' => 'UserController@showUser']);
 
 // Appel de la fonction d'ajout un like
-Route::get('/like/{login}/{id}');
+Route::get('/like/{login}/{id}', ['uses' =>'LikeController@addLike']);
+
+// Ajout d'un épisode
+Route::post('/validerEpisode', 'EpisodeController@addEpisode');

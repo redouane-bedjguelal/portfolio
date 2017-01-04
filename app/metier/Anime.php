@@ -76,4 +76,13 @@ class Anime extends Model
                 ->where('NUMANIME', $idAnime)
                 ->update(['NOMANIME' => $nomAnime, 'NUMSTUDIO' => $studio, 'SAISONANIME' => $saison, 'ANNEEANIME' => $annee, 'NBEPISODES' => $nbep, 'RESUME' => $resume, 'ESTFINI' => $fini, 'IMGANIME' => $image]);
     }
+    
+    // Fonction récupérant les anime likés
+    public function getAnimeLiked($login){
+        $anime = DB::table('anime')
+            ->join('aimer', 'anime.NUMANIME', '=', 'aimer.NUMANIME')
+            ->where('aimer.LOGINUSER', '=', $login)
+            ->get();
+        return $anime;
+    }
 }

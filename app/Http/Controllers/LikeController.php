@@ -14,15 +14,13 @@ use App\metier\Aimer;
 use Illuminate\Support\Facades\Session;
 use Exception;
 
-class EpisodeController extends Controller {
+class LikeController extends Controller {
 
     // Fonction ajoutant un like
     public function addLike($login, $id){
-        $like = new Aimer();
-        $like->addLike($login, $id);
-        $mesLikes = new Aimer();
-        $mesLikes = $like->getLikeByUser($login);
-        return view('pageUser', compact('login', 'mesLikes'));
+        $unLike = new Aimer();
+        $unLike->addLike($login, $id);
+        return redirect('/welcome');
     }
 
 }

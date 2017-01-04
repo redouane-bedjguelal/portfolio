@@ -78,6 +78,8 @@ class UserController extends Controller
         $like = new Aimer();
         $user = $user->getUserByName($login);
         $like = $like->getLikeByUser($login);
+        $anime = new Anime();
+        $like = $anime->getAnimeLiked($login);
         return view('pageUser', compact('user', 'like'));
     }
 }
