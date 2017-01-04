@@ -29,11 +29,10 @@
                     </span>
                 </div>
                 <div class="anime-infos font-aaa">
-                    <span class="unselectable">rating</span>
+                    <span class="unselectable">like</span>
                     <!--TODO : RATING SYSTEM-->
                     <span class="anime-infos-right font-white">
-                        <i class="fa fa-star teal-text unselectable"></i>
-                        eee
+                        <i class="fa fa-heart teal-text unselectable"></i>
                     </span>
                 </div>
             </div>
