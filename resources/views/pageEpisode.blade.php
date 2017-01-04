@@ -26,7 +26,7 @@
         </div>
         <!--/.video-block-->
         <!--video-bottom-buttons-->
-        
+
         <a href="" style="pointer-events: none;"><div class="col-xs-4 video-bottom-buttons" style="z-index: 1;"><i class="fa fa-angle-left" aria-hidden="true"></i></div></a>
         <a href="" style="pointer-events: none;"><div class="col-xs-4 video-bottom-buttons" style="z-index: 1;"><i class="fa fa-list" aria-hidden="true"></i></div></a>
         <a href="" style="pointer-events: none;"><div class="col-xs-4 video-bottom-buttons" style="z-index: 1;"><i class="fa fa-angle-right" aria-hidden="true"></i></div></a>

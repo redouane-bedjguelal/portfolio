@@ -41,7 +41,7 @@
                             </div>
                             <div class="text-xs-center">
                                 <button class="btn btn-primary btn-dark-green btn-lg">Sign up</button>
-                                
+
                                 <button class="btn btn-pink btn-lg" data-toggle="modal" data-target="#myModal" type="button">Sign in</button>
                             </div>
                             {!! Form::close() !!}

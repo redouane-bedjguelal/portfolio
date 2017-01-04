@@ -29,7 +29,7 @@
                         <input type="text" name="nom" value="{{$unEpisode->NOMEPISODE or ''}}" class="form-control" placeholder="Entrez un titre" required autofocus>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="col-md-3 col-sm-3 control-label">ID Video : </label>
                     <div class="col-md-3 col-sm-3">

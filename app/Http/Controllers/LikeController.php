@@ -17,7 +17,7 @@ use Exception;
 class LikeController extends Controller {
 
     // Fonction ajoutant un like
-    public function addLike($login, $id){
+    public function addLike($login, $id) {
         $unLike = new Aimer();
         $unLike->addLike($login, $id);
         return redirect('/welcome');

@@ -6,7 +6,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <!-- Tab icon -->
         <link rel="icon" href="http://i.imgur.com/quLWzbI.png">
-        
+
         <!--Font Awesome + Baumans-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
@@ -48,7 +48,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('genreList') }}">GENRE LIST</a>
                             </li>
-                        @if(Session::get('id')=='nunuz')
+                            @if(Session::get('id')=='nunuz')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('ajouterAnime') }}">ADD ANIME</a>
                             </li>
@@ -58,7 +58,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('ajouterEpisode') }}">ADD EPISODE</a>
                             </li>
-                        @endif
+                            @endif
                         </ul>
                         <ul class="nav navbar-nav" style="float: right;">
                             <li class="nav-item">
